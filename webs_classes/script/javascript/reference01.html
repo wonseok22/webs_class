@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript</title>
+    <title>reference</title>
     <style>
         @font-face {
             font-family: 'NexonLv1Gothic';
@@ -78,7 +78,6 @@
 
         }
 
-
         h2 {
             margin-top: 30px;
             background-color: #000;
@@ -111,75 +110,19 @@
         }
     </style>
 </head>
-
 <body>
-    <h1><a href="../index.html">Javascript</a></h1>
-    <ul class="list1">
-        <li><a href="javascript01.html">데이터 저장하기</a></li>
-        <li><a href="javascript02.html">데이터 불러오기</a></li>
-        <li><a href="javascript03.html">데이터 실행하기</a></li>
-        <li><a href="javascript04.html">데이터 제어하기</a></li>
-    </ul>
+    <h1>변수란?</h1>
+    <p>변수(Variables)는 변하는 데이터(값)을 저장할 수 있는 메모리 공간입니다. 데이터를 담을 수 있는<br>그릇이라 할 수 있죠. 변수에는 데이터가 오직 한 개만 저장됩니다. 그러다 보니 새로운 데이터가 들<br>어오면 기존에 있던 데이터는 메모리 공간에서 지워지게 됩니다.<br>변수에 저장할 수 있는 데이터의 종류로는 문자형(String),<br>숫자형(Numbers), 논리형(Boolean) 그리고 빈(Null) 데이<br>터가 있습니다.<br></p>
 
-    <h2>데이터 저장하기</h2>
-    <ul>
-        <li>01. 변수 : 데이터 저장<a href="reference01.html" class="refer">참고</a></li>
-        <li>02. 변수 : 데이터 저장 + 데이터 변경</li>
-        <li>03. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가</li>
-    </ul>
-    <hr>
+    <h2>변수 선언</h2>
+    <p>변수를 선언할 때는 다음 기본형과 같이 var 키워드를 변수형 앞에 붙입니다. 변수명에는 한글을 사<br>용할 수 없으며, 영문과 숫자 그리고 일부 특수 문자(_,$)만 포함할 수 있습니다. 변수명은 의미에<br> 맞게 만드는 것이 좋습니다. 가령, 수학 시험 점수를 저장하는 변수라면 'mathNum'이라고 이름 지<br>으면 되겠죠, 이때 변수명은 단어와 단어의 조합으로 지었고, 두 번째 단어의 첫 글자는 대문자로 표<br>기했습니다. 이는 마치 낙타의 등과 같다고 해서 낙타(Camel)표기법이라 부릅니다. <br> 변수를 선언하면 변수명으로 데이터를 저장할 수 있는 공간이 생성됩니다. 다음은 box라는 이름을<br>가진 변수에 100이라는 값을 대입한 예제입니다. 초기에는 값이 등록되지 않은 상태(Null)입니다.<br>box에 100을 대입하면 다음 그림과 같이 변수에 100이 저장됩니다.<br></p>
 
-    <!-- JavaScript -->
-    <script>
-        //sample01
-        // 01. 변수 : 데이터 저장소
-        {
+    <h2>변수에 저장할 수 있는 자료형</h2>
+    <h3>문자형</h3>
+    <p>문자형(String) 데이터는 다음과 같이</p>
 
-            var x = 100; // 변수 x에 숫자 100을 저장
-            var y = 200; // 변수 y에 숫자 200을 저장
-            var z = "javascript"; // 변수 z에 문자 Javascript를 저장
-
-            document.write("<br>*** 01. 변수 ***<br>")
-            document.write(x, "<br>");
-            document.write(y, "<br>");
-            document.write(z, "<br>");
-
-        }
-
-        // 02. 변수 : 데이터 저장 + 데이터 변경
-        {
-
-            let x = 100; // 변수 x에 숫자 100을 저장
-            let y = 200; // 변수 y에 숫자 200을 저장
-            let z = "JavaScript"; // 변수 z에 문자 Javascript를 저장
-
-            x = 300; // 변수 x의 값 300으로 변경
-            y = 400; // 변수 y의 값 400으로 변경
-            z = "Jquery"; // 변수 z의 값 "jqeury"로 변경
-
-            document.write("<br>*** 02. 변수***<br>");
-            document.write(x, "<br>");
-            document.write(y, "<br>");
-            document.write(z, "<br>");
-
-        }
-
-        // 03. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가
-        {
-            let x = 100; //변수 x에 100을 할당
-            let y = 200; //변수 y에 200을 할당
-            let z = "Javascript"; //변수 z에 "Javascript"를 할당
-
-            x += 300; // 변수 x에 300을 추가
-            y += 400; // 변수 y에 400을 추가
-            z += "Jqeury"; // 변수 z에 "Jqeury"를 추가
-
-            document.write("<br>*** 03. 변수***<br>");
-            document.write(x, "<br>");
-            document.write(y, "<br>");
-            document.write(z, "<br>");
-        }
-    </script>
+    <h3>숫자형</h3>
+    <p></p>
 </body>
 
 </html>
