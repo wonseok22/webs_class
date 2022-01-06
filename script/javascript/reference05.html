@@ -143,6 +143,31 @@
 
 }</code></pre>
     <hr>
+    <h2>자바스크립트 객체의 종류</h2>
+    <h3>1. JavaScript 내장 객체 (Built-in Object)</h3>
+    <p>
+        JavaScript 엔진이 구동되는 시점에서 바로 제공되며 JavaScript코드 어디에서든 사용이 가능하다. 아래의 내장 객체들 외에도 많은 내장 객체들이 있다.
+<pre class="line-numbers"><code class="language-js">{
+
+    Global
+    Object
+    String
+    Number
+    Boolean
+    Date
+    Array
+    Math
+
+}</code></pre> 
+        <hr>
+        <h3>2. 브라우저 내장 객체 (Native Object)</h3>
+        <p>브라우저 내장 객체 또한 JavaScript가 구동되는 시점에서 바로 사용이 가능한 객체들이며 내장 객체이다. 하지만 브라우저마다 브라우저 내장 객체를 사용함에 있어 구성을 달리하는 경우가 있기 때문에 JavaScript 내장 객체와 분류해 두었다. 하지만 브라우저 내장 객체는 브라우저, 즉 JavaScript 엔진을 구동하는 것들에서 build되는 객체들이다. 예시로는 BOM과 DOM이 있다. 이 객체들은 자바스크립트 내장객체가 구성된 후에 구성이 된다.</p>
+        <br>
+        <p>1. 브라우저 객체 모델(BOM)<br> 2. 문서 객체 모델 (DOM)</p>
+        <hr>
+        <h3>3. 사용자 정의 객체 (Host Object)</h3>
+       <p> 말 그대로 사용자가 생성한 객체들로 생성자 함수 또는 객체 리터럴을 통해 사용자가 객체를 정의하고 확장시킨 객체들이기 때문에 내장 객체들이 구성된 이후에 구성되어 진다.</p>
+    <hr>
     <h2>객체의 특징</h2>
     <ul>
         <li>객체는 변수이다. 그러나 객체에는 많은 값이 포함될 수 있다. (자바스크립트 변수처럼 단일 값을 포함 할 수 있다.)</li>
