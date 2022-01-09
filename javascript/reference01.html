@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>
+
+    <!-- style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</head>
+
+<body>
+    <!-- header -->
+    <header id="header">
+        <h1><a href="index.html">Javascript</a></h1>
+        <nav>
+            <ul>
+                <li class="active"><a href="reference01.html">기초 문법</a></li>
+                <li><a href="reference02.html">변수</a></li>
+                <li><a href="reference03.html">자료형</a></li>
+                <li><a href="reference04.html">식별자/키워드</a></li>
+                <li><a href="reference05.html">객체</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main -->
+    <main id="main">
+
+        <div class="doc">
+            <h2>자바스크립트 선언문</h2>
+            <p>선언문 : <strong>자바스크립트 코드</strong>를 작성할 영역을 선언하는 것</p>
+            <p>선언문은 <strong>&lt;head&gt;</strong>태그 영역 또는 <strong>&lt;body&gt;</strong> 태그 영역에 선언하면 된다.</p>
+            <div class="code">
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title>Document＜/title&gt;
+    &lt;script&gt;
+        document.write("환영합니다")
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;html&gt;
+</pre></code>
+            </div>
+
+            <h2>자바스크립트 주석처리</h2>
+            <p>자바스크립트 선언문 안에서 코드가 아닌 설명글을 넣고 싶을 때는 <strong>주석 처리</strong>를 하면 됩니다.</p>
+            <p>이때 한 줄 주석일 경우에는 '//한줄 설명글'로 작성하고, 여러 줄 주석 일 경우에는 '/*여러줄 설명글*/'로 작성하면 됩니다.</p>
+            <div class="code">
+<pre><code>html 주석방법은  &lt;!-- --&gt; 입니다.  ex)&lt;!-- HTML 주석처리 --&gt;   단축키는 Ctrl + / 입니다. 
+자바스크립트 주석 방법은  한줄일 경우 // 입니다 ex) //Javascript 주석처리
+두줄 일경우 /* */을 사용해 줍니다. ex) /*  Javascript
+                                                         두줄 주석처리 */ 
+</pre></code>
+            </div>
+
+            <h2>내부 스크립트 외부로 분리하기</h2>
+            <p>HTML 내부에 작성된 자바스크립트는 마지막에는 외부로 분리하는 작업을 해야 합니다. 그렇게 하면 자바스크립트 소스 찾기도 쉬울 뿐만 아니라 누군가가 소스를 손상시킬 염려도 없습니다. 즉,
+                외부로 분리하는 주된 목적은 프로젝트 관리를 원활하게 하기 위함입니다. 다음은 외부 자바스크립트 연동 코드로 파일을 연결하는 기본형입니다.</p>
+            <div class="code">
+<pre><code>{
+    &lt;script src="js 파일 경로"&gt;&lt;/script&gt;
+}</code></pre>
+                <br>
+<pre><code>{
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="ko"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;title&gt;외부 자바스크립트 연동&lt;/title&gt;
+            &lt;scrips src="자바스크립트파일.JS"&gt;&lt;/scrips&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;
+}</code></pre>
+            </div>
+
+            <h2>코드 입력시 주의 사항</h2>
+            <p>자바스크립트는 <strong>대·소문자</strong>를 구분하여 작성합니다.</p>
+            <div class="code">
+<pre><code>ex) 날짜 객체 생성 : New date(); (X)
+ex) 날짜 객체 생성 : new Date(); (O)
+</pre></code>
+            </div>
+            <br>
+            <p>1. 코드를 한 줄을 작성한 후에는 <strong>세미콜론</strong>을 쓰는 것이 좋습니다.</p>
+            <p>2. 세미콜론을 쓰지 않고 한 줄에 2개의 코드를 작성할 경우 오류가 발생합니다.</p>
+            <div class="code">
+<pre><code>ex) document.write("hi") document.write("bye")  (X)
+ex) document.write("hi"); document.write("bye");  (O)
+</pre></code>
+            </div>
+            <br>
+            <p>3. 코드를 작성 할때는 한줄에 한 <strong>문장</strong>만 작성하는 것이 가독성을 위해 좋습니다.</p>
+            <p>4. 문자형 데이터를 작성할 때는 <strong>큰따옴표("")와 작은따옴표('')의 겹침 오류</strong>를 주의해야 합니다.</p>
+            <div class="code">
+<pre><code>큰따옴 겹칩 오류
+document.write("책에 "자바스크립트는 대소문자를 구분해야 합니다"라고 나와 있다.");
+올바르게 사용된 예제
+document.write('책에 "자바스크립트는 대소문자를 구분해야 합니다"라고 나와 있다.');
+document.write("책에 \"자바스크립트는 대소문자를 구분해야 합니다\"라고 나와 있다.");
+</pre></code>
+            </div>
+            <br>
+            <p>5. 코드를 작성할 때 <strong>중괄호{} 또는 소활호()의 짝</strong>이 맞아야 합니다.</p>
+            <div class="code">
+<pre><code>document.write("welcome!"; (X) 
+document.write("welcome!"); (O)
+</pre></code>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
