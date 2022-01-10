@@ -24,8 +24,8 @@
                 <li><a href="reference01.html">기초 문법</a></li>
                 <li><a href="reference02.html">변수</a></li>
                 <li class="active"><a href="reference03.html">자료형</a></li>
-                <li><a href="reference04.html">식별자/키워드</a></li>
-                <li><a href="reference05.html">객체</a></li>
+                <li><a href="reference04.html">for()문</a></li>
+                <li><a href="reference05.html">연산자</a></li>
             </ul>
         </nav>
     </header>
@@ -115,6 +115,62 @@
     string
 }</code></pre>
             </div>
+
+            <h2>객체(Object)</h2>
+            <p>JavaScript는 <strong>객체기반의 스크립트 언어</strong>이며 JavaScript를 이루고 있는 거의 모든 것은 객체이다. <br>객체란 여러 속성을 하나의 변수에 저장할 수 있도록 해주는 데이터
+                타입으로 <strong>Key / Value</strong> Pair를 저장할 수 있는 구조이다.</p>
+            <h2>객체의 생성방법</h2>
+            <p>객체는 다음과 같은 방법으로 선언할 수 있다.</p>
+            <div class="code">
+<pre><code>{
+    const obj = new Object();
+    or
+    const obj = {};
+}</code></pre>
+            </div>
+            <br>
+            <h2>자바스크립트 객체의 종류</h2>
+            <h3>1. <strong>JavaScript 내장 객체</strong> (Built-in Object)</h3>
+            <p>JavaScript 엔진이 구동되는 시점에서 바로 제공되며 JavaScript코드 어디에서든 사용이 가능하다. 아래의 내장 객체들 외에도 많은 내장 객체들이 있다.</p>
+            <div class="code">
+<pre><code>{
+    Global
+    Object
+    String
+    Number
+    Boolean
+    Date
+    Array
+    Math
+}</code></pre>
+            </div>
+
+            <br>
+            <h3>2. <strong>브라우저 내장 객체</strong> (Native Object)</h3>
+            <p>브라우저 내장 객체 또한 JavaScript가 구동되는 시점에서 바로 사용이 가능한 객체들이며 내장 객체이다. 하지만 브라우저마다 브라우저 내장 객체를 사용함에 있어 구성을 달리하는
+                경우가 있기 때문에 JavaScript 내장 객체와 분류해 두었다. 하지만 브라우저 내장 객체는 브라우저, 즉 JavaScript 엔진을 구동하는 것들에서 build되는
+                객체들이다. 예시로는 BOM과 DOM이 있다. 이 객체들은 자바스크립트 내장객체가 구성된 후에 구성이 된다.</p>
+            <br>
+<pre>
+        1. 브라우저 객체 모델(BOM)
+        2. 문서 객체 모델 (DOM)
+</pre>
+            <br>
+            <h3>3. <strong>사용자 정의 객체</strong> (Host Object)</h3>
+            <p> 말 그대로 사용자가 생성한 객체들로 생성자 함수 또는 객체 리터럴을 통해 사용자가 객체를 정의하고 확장시킨 객체들이기 때문에 내장 객체들이 구성된 이후에 구성되어 진다.</p>
+
+            <h2>객체의 특징</h2>
+            <ul>
+                <li>객체는 <strong>변수</strong>이다. 그러나 객체에는 많은 값이 포함될 수 있다. (자바스크립트 변수처럼 단일 값을 포함 할 수 있다.)</li>
+                <li>객체는 <strong>중괄호 표기</strong>를 이용하여 만들 수 있다.</li>
+                <li>객체는 각각의 key/value에 대한 정보를 나열할 수 있다.</li>
+                <li>Key는 문자열 또는 기호여야 한다.</li>
+                <li>Value는 모든 유형이 될 수 있다.</li>
+                <li>객체는 한 쌍의 key/value 뒤에 쉼표를 이용하여 그 뒤에 오는 key/value와 구분해주어야 한다.</li>
+                <li>객체에서 명명된 값을 Properties라고 한다.</li>
+                <li>변수는 예약어의 이름을 가질 수 없지만 객체는 <strong>어떠한 이름이어도 상관없다.</strong></li>
+                <li>객체 변수를 복사하면 참조가 복사되고 객체가 복제되지 않는다.</li>
+            </ul>
         </div>
     </main>
 
