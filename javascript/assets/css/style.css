@@ -299,10 +299,33 @@ a {
 
 /* 대입 연산자 예시 table용 */
 .ext {
-    padding-left:20px;
+    padding-left: 20px;
 }
 
 .ext tr td {
-    padding: 0px 3px;
+    padding: 0px 3px !important;
     border: 1px solid #000;
+}
+
+/* table */
+.doc table {
+    border-collapse:collapse;
+    border-spacing: 1px;
+    text-align: center;
+    line-height: 1.5;
+    margin: 0px 10px 20px 0px;
+}
+.doc table th {
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    color: #000;
+    background: #ccf1e2 ;
+    border: 1px solid #ccc;
+}
+.doc table td {
+    padding: 10px;
+    vertical-align: top;
+    border: 1px solid #ccc;
+    background: #fff;
 }
