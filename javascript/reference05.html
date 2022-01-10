@@ -39,6 +39,8 @@
             <br>
             <h3>산술 연산자</h3>
             <p>산술 연산자에는 더하기(+), 빼기(-), 곱하기(*), 나누기(/), 나머지(%)가 있습니다. 산술 연산자로 연산을 하기 위해서는 연산 대상 데이터가 반드시 2개 있어야 합니다. 다음은 산술 연산자의 종류와 기본형을 정리한 표입니다.</p>
+            <br>
+            <h4>산술 연산자의 종류와 기본형</h4>
             <h3>문자 결합 연산자</h3>
             <p>문자 결합 연산자는 피연산자가 문자형 데이터입니다. 여러 개의 문자를 하나의 문자형 데이터로 결합할 때 사용합니다. <br><br> 다음과 같이 더하기에 피연산자로 문자형 데이터가 한 개라도 포함되어 있으면 다른 피연산자의 데이터는 자동으로 문자형 데이터로 형 변환되고 문자 결합이 이루어져 하나의 문자형 데이터를 반환합니다.</p>
             <br>
@@ -68,6 +70,8 @@
             <br>    
             <h3>대입 연산자</h3>
             <p>대입 연산자(=)는 연산된 데이터를 변수에 저장할 때 사용합니다. 복합 대입 연산자(+=, -=, *=, /=, %=)는 산술 연산자와 대입 연산자가 복합적으로 적용된 것을 말합니다.<br><br>아래에 대입 연산자의 종류를 표로 나타내었습니다.</p>
+            <br>
+            <h4>대입 연산자의 종류</h4>
             <table >
                 <thead>
 
@@ -136,6 +140,7 @@
     변수++; 또는 ++변수;
 </pre>
             </div>
+            <br>
             <div class="code">
 <pre>
     1. 먼저 B의 값이 1 증가하고 증가된 B값을 A에 대입합니다.
@@ -145,9 +150,89 @@
     var A = B++;
 </pre>
             </div>
+            <br>
+            <p>다음은 증감 연산자를 사용해 변수에 저장된 숫자를 증가하거나 감소하여 문서에 출력하는 예제입니다.</p>
+            <div class="code">
+<pre><code>&lt;script&gt;
+    var num1 = 10;
+    var num2 = 20;
+    var sesult;
 
+    num1--;     //9
+    document.write(num1, "&lt;br&gt;");
+    
+    num1++;     //10
+    document.write(num1, "&lt;br&gt;");
+    
+    result = num2++;    // result:20 num2:21
+    document.write(result, "&lt;br&gt;");
+
+    result = ++num2;    // result:22 num2:22
+    document.write(result, "&lt;br&gt;");
+&lt;/script&gt;
+
+    실행결과:
+    9
+    10
+    20
+    22
+</code></pre>
+            </div>
+            <br>
             <h3>비교 연산자</h3>
+            <p>두 데이터를 '크다, 작다, 같다'와 같이 비교할 때 사용하는 연산자입니다. 연산된 결괏값은 true(참) 또는 false(거짓)로 논리형 데이터를 반환합니다. 다음은 비교 연산자의 종류입니다.</p>
+            <br>
+            <h4>비교 연산자의 종류</h4>
+            <p>비교 연산자 ==와 !=는 피연산자의 자료형(type)이 비교 연산자의 실행 결과에 영향을 미치지 않습니다.</p>
+
+            <h4>예제</h4>
+            <div class="code">
+<pre>
+    var k = 10, m = '10';
+    k == 10     //true
+    m == 10     //true
+    k === 10    //true
+    m === 10    //false
+</pre>
+            </div>
+            <br>
+            <p> 위 결과에서 볼 수 있듯이 ==과 != 연산자는 데이터의 type이 실행 결과에 영향을 미치지 않지만, ===과 !== 연산자는 비교 데이터의 type이 실행 결과에 영향을 미칩니다.<br><br> 다음 예제로 비교 연산자에 대해 더 살펴보겠습니다.</p>
+            <div class="code">
+<pre><code>&lt;script&gt;
+   var a = 10;
+   var b = 20;
+   var c = 10;
+   var f = "20";
+   var result;
+
+   result = a &gt; b;  //false
+   document.write(result, "&lt;br&gt;");
+   result = a &lt; b;  //true
+   document.write(result, "&lt;br&gt;");
+   result = a &lt;= b;  //true
+   document.write(result, "&lt;br&gt;");
+   result = b == f;  //true
+   document.write(result, "&lt;br&gt;");
+   result = a != b;  //true
+   document.write(result, "&lt;br&gt;");
+   result = b === f;  //false
+   document.write(result, "&lt;br&gt;");
+&lt;/script&gt;
+
+    실행결과:
+    false
+    true
+    true
+    true
+    true
+    false
+</code></pre>
+            </div>
+            <br>
             <h3>논리 연산자</h3>
+            <p>논리 연산자에는 <strong>||(or), &&(and), !(not)</strong>이 있으며, 논리 연산자는 피연산자가 논리형 데이터인 true 또는 false로 결괏값을 반환합니다. ||(or)연산자는 피연산자중 하나만 true이면 true라는 결괏값을 반환합니다. 하지만 &&(and) 연산자는 피연산자 중 하나만 false이면 false라는 결괏값을 반환합니다. !(not)은 논리 부정 연산자로, 피연산자가 true이면 false라는 반대의 결괏값을 반환합니다.</p>
+            <h4>논리 연산자의 종류</h4>
+            
         </div>
     </main>
 
