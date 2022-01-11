@@ -246,21 +246,21 @@ a {
     border: 1px solid #000;
     padding: 20px 20px 15px 20px;
     border-radius: 10px;
-    background: #97f0ad;
+    background: #e3f2fd;
 }
 
 .doc .code {
     border: 1px solid #cdcdcd;
     padding: 20px 20px 15px 20px;
     border-radius: 5px;
-    background: #d0f3e3;
+    background: #e1f0fd;
     overflow-x: scroll;
     margin-bottom: 10px;
     margin-top: 5px;
 }
 
 .doc strong {
-    background: #6adab8;
+    background: #90CAF9;
     font-weight: normal;
     border-radius: 20px;
     padding: 0px 10px 0px 10px;
@@ -268,23 +268,28 @@ a {
 }
 
 /* doc table */
-.doc .table table {
-    min-width: 800px;
+.doc .table {
     overflow-x: auto;
+}
+
+.doc .table table {
     border-collapse: collapse;
     text-align: center;
     line-height: 1.5;
     margin: 0px 10px 20px 0px;
     width: 100%;
+    min-width: 800px;
 }
+
 .doc .table table th {
     padding: 5px;
     font-weight: bold;
     vertical-align: top;
     border: 1px solid #cdcdcd;
     color: #000;
-    background: #ccf1e2 ;
+    background: #bbdefb ;
 }
+
 .doc .table table td {
     padding: 5px;
     border: 1px solid #cdcdcd;
@@ -304,7 +309,7 @@ a {
         padding: 10px 15px;
     }
     .doc .table table {
-        width: 800px;
+        width: 100%;
     }
 }
 
@@ -346,13 +351,27 @@ a {
     justify-content: center;
     flex-direction: column;
     height: 100vh;
-    border: 8px solid #20ca6d;
+    border: 8px solid #0057d9;
     box-sizing: border-box;
+    border-radius: 20px;
+    position: relative;
+}
+
+.javascript::before {
+    content: '';
+    width: 100%;
+    height: calc(100vh - 15px);
+    border: 8px solid #0066ff;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0; top: 0;
+    z-index: -1;
+    border-radius: 12px;
 }
 
 .javascript h1 {
     font-size: 8vw;
-    color: #20ca6d;
+    color: #0057d9;
 }
 
 .javascript .menu {
@@ -364,8 +383,8 @@ a {
 }
 
 .javascript .menu li a {
-    border: 1px dashed #20ca6d;
-    color: #20ca6d;
+    border: 1px dashed #0057d9;
+    color: #0057d9;
     border-radius: 50px;
     padding: 10px;
     display: inline-block;
@@ -373,6 +392,13 @@ a {
 }
 
 .javascript .menu li a:hover {
-    background: #20ca6d;
+    background: #0057d9;
     color: #fff;
+}
+
+@media (max-width: 800px) {
+    .javascript h1 {
+        font-size: 55px;
+        padding: 10px 0;
+    }
 }
