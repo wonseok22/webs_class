@@ -205,7 +205,9 @@ body {
     margin-top: 5px;
     width: 100%;
     min-width: 800px;
-
+}
+.doc .code h5:first-child {
+    padding: 0px;
 }
 
 .doc strong {
