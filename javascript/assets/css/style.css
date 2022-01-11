@@ -254,6 +254,9 @@ a {
     padding: 20px 20px 15px 20px;
     border-radius: 5px;
     background: #d0f3e3;
+    overflow-x: scroll;
+    margin-bottom: 10px;
+    margin-top: 5px;
 }
 
 .doc strong {
@@ -264,6 +267,46 @@ a {
     display: inline-block;
 }
 
+/* doc table */
+.doc .table table {
+    min-width: 800px;
+    overflow-x: auto;
+    border-collapse: collapse;
+    text-align: center;
+    line-height: 1.5;
+    margin: 0px 10px 20px 0px;
+    width: 100%;
+}
+.doc .table table th {
+    padding: 5px;
+    font-weight: bold;
+    vertical-align: top;
+    border: 1px solid #cdcdcd;
+    color: #000;
+    background: #ccf1e2 ;
+}
+.doc .table table td {
+    padding: 5px;
+    border: 1px solid #cdcdcd;
+    vertical-align: top;
+    background: #fff;
+}
+/* //doc table */
+
+@media (max-width: 800px){
+    .doc {
+        font-size: 14px;
+    }
+    .doc h2 {
+        font-size: 14px;
+    }
+    .doc .line {
+        padding: 10px 15px;
+    }
+    .doc .table table {
+        width: 800px;
+    }
+}
 
 /* result */
 .result h4 {
@@ -296,36 +339,40 @@ a {
     }
 }
 
-
-/* 대입 연산자 예시 table용 */
-.ext {
-    padding-left: 20px;
+/* javascript */
+.javascript {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    border: 8px solid #20ca6d;
+    box-sizing: border-box;
 }
 
-.ext tr td {
-    padding: 0px 3px !important;
-    border: 1px solid #000;
+.javascript h1 {
+    font-size: 8vw;
+    color: #20ca6d;
 }
 
-/* table */
-.doc table {
-    border-collapse:collapse;
-    border-spacing: 1px;
+.javascript .menu {
     text-align: center;
-    line-height: 1.5;
-    margin: 0px 10px 20px 0px;
 }
-.doc table th {
-    padding: 10px;
-    font-weight: bold;
-    vertical-align: top;
-    color: #000;
-    background: #ccf1e2 ;
-    border: 1px solid #ccc;
+
+.javascript .menu li {
+    display: inline;
 }
-.doc table td {
+
+.javascript .menu li a {
+    border: 1px dashed #20ca6d;
+    color: #20ca6d;
+    border-radius: 50px;
     padding: 10px;
-    vertical-align: top;
-    border: 1px solid #ccc;
-    background: #fff;
+    display: inline-block;
+    margin: 5px 0px;
+}
+
+.javascript .menu li a:hover {
+    background: #20ca6d;
+    color: #fff;
 }
