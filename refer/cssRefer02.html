@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Reference</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assets/face/css.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/css.png">
+    <link rel="icon" href="../assets/face/css.png" sizes="128x128">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/prism.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    
+    <header id="header">
+        <h1><a href="#">라인 중학교 1학년 코딩반</a></h1>
+        <strong>한원석</strong>
+    </header>
+
+    <main id="contents">
+
+        <h2><a href="css.html">CSS <em>Block/Inline</em></a></h2>
+
+        <div class="menu">
+            <ul>
+                <li><a href="css.html">속성</a></li>
+                <li><a href="cssRefer01.html">기초 문법</a></li>
+                <li class="active"><a href="cssRefer02.html">Block/Inline</a></li>
+                <li><a href="cssRefer03.html">CSS 단위</a></li>
+                <li><a href="cssRefer04.html">CSS 색상</a></li>
+            </ul>
+        </div>
+        <!-- //menu -->
+
+
+        <div class="refer">
+            <div class="doc">
+                <h3>Block구조</h3>
+                <div class="code">
+                    <p>Block구조는 한 줄에 나열되지 않고 그 자체로 한 줄을 완전히 차지한다. 따라서 같은 줄에 여러 개를 놓으려는 콘텐츠는 Block구조를 사용하면 안된다.<br><br> 대표적인 태그로는 &lt;p&gt;태그가 있다. 또한, Block태그는 margin, width, height 속성을 정의하면 모두 적용된다.</p>
+                </div>
+                <h3>Inline구조</h3>
+                <div class="code">
+                    <p>Inline 구조는 줄을 바꾸지 않고 다른 요소와 함께 한 행에 위치하려는 성질을 갖고있다. Inline 구조를 갖고 있는 대표적인 태그로는 &lt;a&gt;태그가 있다.</p>
+                </div>
+                <h3>Inline-Block 구조</h3>
+                <div class="code">
+                    <p>Inline과 Block, 두 속성의 중간 단계인 inline-block이라는 이 속성은, Inline과 같이 한 줄에 표현하면서도 margin, width, height 속성을 정의하면 표현할 수 있다. inline-block 속성을 기본값으로 가지고 있는 태그는 없다. 이 속성은 작성자의 CSS를 통해 inline-block임을 선언해 사용하여야 한다.</p>
+                </div>
+            </div>
+        </div>
+        <!-- //refer -->
+    </main>
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</body>
+</html>

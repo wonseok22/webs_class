@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Reference</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assets/face/css.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/css.png">
+    <link rel="icon" href="../assets/face/css.png" sizes="128x128">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/prism.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    
+    <header id="header">
+        <h1><a href="#">라인 중학교 1학년 코딩반</a></h1>
+        <strong>한원석</strong>
+    </header>
+
+    <main id="contents">
+
+        <h2><a href="css.html">CSS <em>기초 문법</em></a></h2>
+
+        <div class="menu">
+            <ul>
+                <li><a href="css.html">속성</a></li>
+                <li class="active"><a href="cssRefer01.html">기초 문법</a></li>
+                <li><a href="cssRefer02.html">Block/Inline</a></li>
+                <li><a href="cssRefer03.html">CSS 단위</a></li>
+                <li><a href="cssRefer04.html">CSS 색상</a></li>
+            </ul>
+        </div>
+        <!-- //menu -->
+
+
+        <div class="refer">
+            <div class="doc">
+                <h3>CSS란?</h3>
+                <p>CSS는 Cascading Style Sheets의 약자로 HTML, XHML, XML 같은 문서의 스타일을 꾸밀 때 사용하는 스타일 시트 언어이다.</p>
+                <br>
+                <p>HTML로 문서의 뼈대를 만들면 CSS는 이 문서를 꾸며 글꼴, 배경색, 위치, 너비와 높이 등을 지정하거나 웹 브라우저, 스크린 크기, 장치에 따라서 화면을 다르게 표시될 수 있도록 지정할 수 있다.</p>
+                <h3>CSS 주석 표시</h3>
+                <p>CSS의 주석은 /*과 */기호를 사용하며 기호 사이에 주석 내용을 적으면 된다.<br><br></p>
+                <div class="code">
+<pre><code>/* 이곳에 내용을 적으세요 */ 
+</code></pre>
+                </div>
+
+                <h3>CSS 선언 방법</h3>
+                
+                <h4>내부 스타일</h4>
+                <p>HTML 문서 내에서 &lt;head&gt;와 &lt;/head&gt;사이에 &lt;style&gt; 태그로 지정하는 방법</p>
+                <div class="code">
+<pre><code>&lt;head&gt;
+    &lt;style type="text/css"&gt;
+        Selector {property: value;}
+       ex) h1 {color:red} 
+    &lt;/style&gt;
+&lt;/head&gt;
+</code></pre>
+                </div>                
+                <h4>외부 스타일</h4>
+                <p>CSS라는 확장자를 가진 스타일 시트 파일을 만들고 이 파일을 HTML 문서에 연결하여 사용하는 방법</p>
+                <div class="code">
+<pre><code>&lt;head&gt;
+        &lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;
+&lt;/head&gt;
+</code></pre>
+                </div>                
+                <h4>인라인 스타일</h4>
+                <p>스타일을 지정하고싶은 태그에 직접적으로 주입해주는 방식, style 속성으로 property: value 의 값을 가짐</p>
+                <div class="code">
+<pre><code>&lt;p style="font-size: 15px;"&gt;15픽셀사이즈로 디자인됩니다.&lt;/p&gt;
+</code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- //refer -->
+    </main>
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</body>
+</html>

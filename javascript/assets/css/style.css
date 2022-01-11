@@ -223,12 +223,12 @@ a {
     padding-bottom: 300px;
 }
 
-.doc h2 {
+.doc h3 {
     font-weight: 500;
     margin: 40px 0 5px;
 }
 
-.doc h3 {
+.doc h4 {
     font-weight: 800;
     margin: 20px 0 5px;
 }
@@ -303,7 +303,8 @@ a {
         font-size: 14px;
     }
     .doc h2 {
-        font-size: 14px;
+        font-size: 18px;
+        font-weight: bold;
     }
     .doc .line {
         padding: 10px 15px;
