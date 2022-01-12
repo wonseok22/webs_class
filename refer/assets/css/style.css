@@ -205,16 +205,17 @@ body {
     margin-bottom: 50px;
     margin-top: 5px;
 }
-.code {
-    overflow-x: auto;
-}
 
 .doc .code h5{
-    padding: 0 0 0 20px;
+    padding: 10px 0 10px 20px;
 }
 
 .doc .code p{
-    padding: 0 0 0 30px;
+    padding: 15px 0 15px 30px;
+}
+
+.doc .code pre{
+    padding: 15px 0 15px 15px;
 }
 
 .doc strong {
