@@ -197,17 +197,24 @@ body {
 }
 
 .doc .code {
+    overflow-x: auto;
+    min-width: 800px;
     border: 1px solid #cdcdcd;
-    padding: 20px 20px 15px 20px;
     border-radius: 5px;
     background: #e1fdf0;
     margin-bottom: 50px;
     margin-top: 5px;
-    width: 100%;
-    min-width: 800px;
 }
-.doc .code h5:first-child {
-    padding: 0px;
+.code {
+    overflow-x: auto;
+}
+
+.doc .code h5{
+    padding: 0 0 0 20px;
+}
+
+.doc .code p{
+    padding: 0 0 0 30px;
 }
 
 .doc strong {
@@ -300,10 +307,20 @@ body {
         padding: 10px 15px;
     }
     .doc .code {
-        overflow-x: auto;
+        min-width: 500px;
+        padding : 10px 5px;
+        font-size: 12px;
+    }
+    .doc .code p {
+        padding: 0 5px;
+    }
+    .doc .code h5{
+        padding-left: 10px;
+        font-size: 15px;
     }
     .doc .table table {
         width: 100%;
     }
+
 
 }
