@@ -198,12 +198,17 @@ body {
 
 .doc .code {
     overflow-x: auto;
-    min-width: 800px;
     border: 1px solid #cdcdcd;
     border-radius: 5px;
     background: #e1fdf0;
     margin-bottom: 50px;
     margin-top: 5px;
+    padding-right: 15px;
+}
+
+.doc .code pre {
+    min-width: 0.5em;
+    width:100%;
 }
 
 .doc .code h5{
@@ -215,7 +220,7 @@ body {
 }
 
 .doc .code pre{
-    padding: 15px 0 15px 15px;
+    margin: 15px 0 15px 15px;
 }
 
 .doc strong {
