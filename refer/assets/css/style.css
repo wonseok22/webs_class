@@ -124,6 +124,7 @@ body {
 .refer {
     background: #fff;
     padding: 40px;
+    margin-bottom: 40px;
     border: 1px solid #000;
     overflow-x: auto;
 }
@@ -135,6 +136,20 @@ body {
     border-collapse: collapse;
     border-spacing: 0px
 }
+
+.refer table tbody a{
+    padding: 10px;
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.refer table tbody a:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
 
 .refer table th {
     border: 1px solid #aaa;
