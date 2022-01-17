@@ -43,14 +43,93 @@
                 <div class="table">
                     <table>
                         <tbody>
-                            <th></th>
-                            <td></td>
+                            <tr>
+                                <th>&lt;header&gt;</th>
+                                <td>&lt;header&gt;태그는 말 그대로 머릿말 영역으로 문서 또는 섹션의 헤더를 나타낸다. 하나의 문서 안에 여러 개의 &lt;header&gt; 태그가 올 수 있다. 즉, 헤더란 문서 전체의 헤더일 수도 있고, 특정 섹션의 헤더일 수도 있다. 헤더 부분에 제목태그인 &lt;h1&gt;, &lt;h2&gt; 등이 올 수 있다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;nav&gt;</th>
+                                <td>&lt;nav&gt;태그는 내비게이션, 말 그대로 나침반처럼 사용하는 태그이며 다른 영역이나 사이트, 다른 문서 사이를 탐색할 수 있는 링크들의 집합이다. 주로 메뉴의 링크 위치에 사용된다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;main&gt;</th>
+                                <td>&lt;main&gt; 태그는 문서의 주요 콘텐츠를 나타낸다. 사이드 바, 탐색 링크, 로고, 검색 양식, 저작권 등 문서에 반복되는 콘텐츠를 포함시키면 안된다. 한 페이지에 한 번만 사용 가능하다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;section&gt;</th>
+                                <td>&lt;section&gt;태그는 어느 한 구역을 의미한다. 제목을 갖고 있으면서 문서 전체와 관련이 있는 콘텐츠의 집합을 섹션이라고 한다. 공지사항, 포스트, 댓글도 세션이 될 수 있다. &lt;article&gt; 태그 아래에도 섹션이 올 수 있으며 섹션을 사용할 땐 반드시 heading(&lt;h1&gt;~&lt;h6&gt;)을 가져야 한다. </td>
+                            </tr>
+                            <tr>
+                                <th>&lt;article&gt;</th>
+                                <td>&lt;article&gt; 태그는 문서 본문 중 독립된 콘텐츠에 사용한다. 뉴스 기사나 블로그 게시물 등 독립적인 콘텐츠에 사용하며 &lt;article&gt; 밑에 &lt;section&gt; 태그가 올 수도 있다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;aside&gt;</th>
+                                <td>&lt;aside&gt; 태그는 사이드 바라고 불리며 사이드에 배치되는 경우가 많다. 아래쪽에 올 수도 있다. &lt;aside&gt; 부분은 CSS를 활용하여 스타일을 지정하고 광고 영역 등으로 활용될 수 있다. 필요하면 사용하지만 반드시 있어야 하는 태그는 아니다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;footer&gt;</th>
+                                <td>&lt;footer&gt; 태그는 말 그대로 꼬리말, 혹은 바닥글이라는 의미이다. 문서의 바닥글을 나타낼 수도 있고 섹션의 꼬릿말을 달 수도 있다. 주로 화면 가장 아래에서 회사 소개, 저작권, 제작 정보, 버젼 등을 표시한다.</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
 
                 <h3>HTML5에 없어진 태그</h3>
+                <ul>
+                    <li>&lt;basefont&gt;</li>
+                    <li>&lt;big&gt; </li>
+                    <li>&lt;center&gt; </li>
+                    <li>&lt;fonr&gt; </li>
+                    <li>&lt;strike&gt; </li>
+                    <li>&lt;tt&gt; </li>
+                    <li>&lt;frame&gt; </li>
+                    <li>&lt;frameset&gt; </li>
+                    <li>&lt;noframes&gt; </li>
+                    <li>&lt;acronym&gt; </li>
+                    <li>&lt;applet&gt; </li>
+                    <li>&lt;isindex&gt; </li>
+                    <li>&lt;dir&gt; </li>
+                </ul>
                 <h3>HTML5에 의미가 변경된 태그</h3>
+                <div class="table">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>&lt;a&gt;</th>
+                                <td>HTML4에서는 href="#" 또는 href="javascript:;"로 지정해야 널 링크로 사용할 수 있었지만 HTML5에서는 href 속성 없이 사용해도 널 링크로 사용 가능</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;address&gt;</th>
+                                <td>HTML4에서는 이름이나 이메일 주소, 전화번호 등 제작자에 대한 정보를 표시할 때 사용하였지만, HTML5에서는 실제 우편물 주소를 표시</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;b&gt;</th>
+                                <td>HTML4에서는 텍스트를 진하게 표시할 때 사용하였지만, HTML5에서는 텍스트를 진하게 표시할뿐 아니라, 제품 소개서 안의 제품명, 요약문서 안의 키워드처럼 특별하게 중요하지는 않지만 진하게 표시하려고 할 때 사용</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;hr&gt;</th>
+                                <td>HTML4에서는 가로줄을 표시할 때 사용하였지만, HTML5에서는 단락 단위로 주제를 바꾸려고 할 때 사용</td>
+                            </tr>
+                            <tr>
+                                <th> &lt;i&gt;</th>
+                                <td>HTML4에서는 텍스트를 기울어지게 표시할 때 사용하였지만, HTML5에서는 텍스트를 기울어지게 표시할 뿐 아니라, 중요한 정보가 들어 있지 않은 주변 콘텐츠로부터 텍스트를 따로 표시할 때 사용</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;menu&gt;</th>
+                                <td>HTML4에서는 &lt;menu&gt;태그를 사용하지 않도록 권고하였으나, HTML5에서는 실제 문서 메뉴 정보를 제공하는데 사용</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;small&gt;</th>
+                                <td>HTML4에서는 작은 글자로 표시할 때 사용하였지만, HTML5에서는 세부 주석이나 법적 인쇄문서에서 작은 인쇄 정보를 표시할 때 사용</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;strong&gt;</th>
+                                <td>HTML4에서는 글자를 강조할 때 사용하였지만, HTML5에서는 단순히 진하게 표시하는 것보다 중요한 정보를 표시할 때 사용   </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </main>
