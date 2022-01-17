@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Test2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #e7f5e9;
+        }
+
+        #wrap{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #header {
+            width: 1200px;
+            height: 100px;
+            background-color: #c8e6c9;
+        }
+        
+        #nav {
+            width: 1200px;
+            display: flex;
+        }
+
+        #nav .nav-section1{
+            width: 400px;
+            height: 100px;
+            background-color: #a5d6a7;
+        }
+
+        #nav .nav-section2{
+            width: 400px;
+            height: 100px;
+            background-color: #6fc073;
+        }
+
+        #nav .nav-section3{
+            width: 400px;
+            height: 100px;
+            background-color: #a5d6a7;
+        }
+        
+        #contents {
+            width: 1200px;
+            display: flex;
+        }
+
+        #contents .left{
+            width: 300px;
+            height: 780px;
+            background-color: #81c784;
+        }
+
+        #contents .center{
+            width: 600px;
+        }
+
+        #contents .center .center-content1{
+            width: 600px;
+            height: 390px;
+            background-color: #66bb6a;
+        }
+
+        #contents .center .center-content2{
+            width: 600px;
+            height: 390px;
+            background-color: #419f46;
+        }
+
+        #contents .right{
+            width: 300px;
+            height: 780px;
+            background-color: #4caf50;
+        }
+        
+        #footer {
+            width: 1200px;
+            height: 100px;
+            background-color: #44a047;
+        }
+        </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav">
+            <section class="nav-section1"></section>
+            <section class="nav-section2"></section>
+            <section class="nav-section3"></section>
+        </nav>
+        <section id="contents">
+            <article class="left"></article>
+            <article class="center">
+                <article class="center-content1"></article>
+                <article class="center-content2"></article>
+            </article>
+            <article class="right"></article>
+        </section>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>
