@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>
+
+    <!-- style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</head>
+
+<body>
+    <!-- header -->
+    <header id="header">
+        <h1><a href="index.html">Javascript</a></h1>
+        <nav>
+            <ul>
+                <li><a href="reference01.html">기초 문법</a></li>
+                <li><a href="reference02.html">변수</a></li>
+                <li><a href="reference03.html">자료형</a></li>
+                <li><a href="reference04.html">for()문</a></li>
+                <li><a href="reference05.html">연산자</a></li>
+                <li><a href="reference06.html">조건문</a></li>
+                <li><a href="reference07.html">반복문</a></li>
+                <li class="active"><a href="reference08.html">함수</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main -->
+    <main id="main">
+        <div class="doc">
+            <h2>함수</h2>
+            <h3>선언적 함수</h3>
+            <p>함수를 사용하여 코드를 저장한 것을 '함수 정의문' 이라고 합니다. 변수를 선언할 때 var 키워드를 사용한 것처럼 함수에서는 function 키워드를 사용해 변수를 선언합니다. 기본형은 다음과 같습니다.</p>
+            <div class="code">
+<pre>function 함수명(){
+    자바스크립트 코드;    
+}
+</pre>
+            </div>
+            <p>정의되어 있는 함수를 실행하는 기본형은 다음과 같습니다.</p>
+            <div class="code">
+<pre>함수명();
+또는 참조 변수(); // 익명함수일 경우 
+</pre>
+            </div>
+            <p>다음 예제는 함수 정의문과 익명 함수를 변수에 참조한 예입니다. 이렇게 두 가지 방식으로 함수를 선언한 다음 각각 호출하여 코드를 실행합니다.</p>
+            <div class="code">
+<pre><code>&lt;script&gt;
+    var count = 0;
+    myFnc();
+
+    function myFnc(){
+        count++;
+        document.write("hello" + count, "&lt;br&gt;");
+    }
+
+    myFnc();
+
+    var theFnc = function(){
+        count++;
+        document.write("bye" + count , "&lt;br&gt;");
+    }
+
+    theFnc();
+&lt;/script&gt;
+
+
+결과:
+hello1
+hello2
+bye3
+</code></pre>
+            </div>
+            <h3>익명 함수</h3>
+            <p>익명 함수는 함수명이 없는 함수선언으로 참조변수를 함수의 이름처럼 사용하여 호출할 수 있습니다. 또한, 호이스팅을 지원하지 않아 반드시 선언과 정의 이후에 참조해야 합니다.</p>
+            <div class="code">
+<pre>참조 변수 = function(){
+    자바스크립트 코드;    
+}
+</pre>
+            </div>
+            <p>익명함수의 예제는 위의 함수 예제에서 인용하였습니다.</p>
+            <div class="code">
+<pre><code>&lt;script&gt;
+    var count = 0;
+
+    var theFnc = function(){
+        count++;
+        document.write("bye" + count , "&lt;br&gt;");
+    }
+
+    theFnc();
+&lt;/script&gt;
+
+
+결과:
+bye1
+</code></pre>
+            </div>
+
+            
+            
+            <h3>매개변수 함수</h3>
+            <p>선언적 함수는 함수 안에 있는 코드를 실행할 때 단순히 함수명으로 호출해서 코드를 실행했습니다. 즉, 함수를 호출할 때 값을 전달할 수 없었습니다. 하지만 매개변수 함수는 함수를 호출할 때 원하는 값을 전달하여 호출할 수 있습니다. 이렇게 전달받은 값은 매개변수가 받아 함수 정의문에서 사용할 수 있게 됩니다.</p>
+            <p>다음은 매개변수 함수의 기본형입니다.</p>
+            <div class="code">
+<pre>function 함수명(매개변수1, 매개변수2) {
+    자바스크립트 코드;
+}
+함수명(데이터1, 데이터2);</pre>
+            </div>
+            <p>다음은 함수를 호출했을 때 이름과 사는 지역의 데이터를 함수 정의문의 매개변수 name과 area에 각각 전달하여 함수 안에 있는 실행문의 매개변수에 저장된 데이터를 불러와 출력하는 예제입니다.</p>
+            <div class="code">
+<pre><code>&lt;script&gt;
+    function myFnc(name area){
+        document.write("안녕하세요 " + name + "입니다." , "&lt;br&gt;");
+        document.write("사는 곳은 " + name + "입니다." , "&lt;br&gt;&lt;br&gt;");
+    }
+
+    myFnc("홍당무","서울");
+    myFnc("깍두기","부산");
+&lt;/script&gt;
+
+
+결과:
+안녕하세요 홍당무입니다.
+사는 곳은 서울입니다.
+
+안녕하세요 깍두기입니다.
+사는 곳은 부산입니다.
+</code></pre>
+            </div>
+            <p>다음은 질의응답 창을 통해 방문자의 아이디와 비밀번호를 입력받아 만일 잘못된 아이디가 입력된 경우에는 "존재하지 않는 아이디입니다." 라는 경고 창을 나타대고, 잘못된 비밀번호가 입력된 경우에는 "잘못된 비밀번호입니다." 라는 경고 창을 나타냅니다. 아이디와 비밀번호가 일치하면 환영 문구가 출력됩니다.</p>        
+            <div class="code">
+<pre><code>&lt;script&gt;
+    var rightId = "korea";
+    var rightPw = "1234";
+    function login(id, pw){
+        if(id == rightId){
+            if (pw == rightPw){
+                document.write(id + "님 방문을 환영합니다.");
+            }
+            else alert("잘못된 비밀번호입니다.");
+        }
+        else alert('존재하지 않는 아이디입니다.');
+    }
+
+    var userId = prompt("아이디를 입력하세요","");
+    var userPw = prompt("비밀번호를 입력하세요","");
+
+    login(userId,userPw);
+&lt;/script&gt;
+
+
+결과:
+ID, PW : korea, 1234일 때
+korea님 방문을 환영합니다.
+</code></pre>
+            </div>
+            <h3>리턴값 함수</h3>
+            <p>리턴값 함수는 return값을 undefined가 아닌 다른 값으로 명시해놓은 함수입니다. 명시하지 않을 시 default값은 undefined입니다. </p>
+            <p>return문의 기본형입니다.</p>
+            <div class="code">
+<pre>function 함수명() {
+    자바스크립트 코드;
+    return 데이터(값);
+}
+var 변수 = 함수명();</pre>
+            </div>
+            <p>다음 예제는 함수 호출과 함께 인자값 10, 20을 전달합니다. calc()함수는 이 두 값을 더한 값인 30을 반환합니다. 반환된 값은 변수 result에 저장되어 화면에 출력됩니다.</p>
+            <div class="code">
+<pre><code>&lt;script&gt;
+    function calc(num1, num2){
+        return num1 + num2;
+    }
+    var result = calc(10,20);
+    document.write(result);
+&lt;/script&gt;
+
+
+결과:
+30
+</code></pre>
+            </div>
+            <p>다음은 함수 정의문 내에 작성한 코드를 실행한 후 계산된 결괏값을 return 문으로 함수 호출문에 전달하는 예제입니다.</p>
+            <div class="code">
+<pre><code>&lt;script&gt;
+    function testAvg(arrData){
+        var sum = 0;
+        for (var i = 0; i&lt;arrData.length; i++){
+            sum += Number(prompt(arrData[i]+"점수는?", "0"));
+        }
+        var avg = sum / arrData.length;
+        return avg;
+    }
+
+    var arrSubject = ["국어", "수학"];
+    var result = testAvg(arrSubject);
+
+    document.write("평균 점수는" + result + "점입니다.");
+&lt;/script&gt;
+
+
+결과:
+국어 80 수학 70을 입력했을 때
+평균 점수는 75 점입니다.
+</code></pre>
+            </div>
+            
+
+        </div>
+    </main>
+
+</body>
+
+</html>

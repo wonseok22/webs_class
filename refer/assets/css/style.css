@@ -138,11 +138,7 @@ body {
 }
 
 .refer table tbody a{
-    padding: 10px;
-    text-decoration: none;
-    background-color: #000;
-    color: #fff;
-    border-radius: 5px;
+    color: #00db72;
 }
 
 .refer table tbody a:hover{
@@ -208,7 +204,7 @@ body {
     border: 1px solid #000;
     padding: 20px 20px 15px 20px;
     border-radius: 10px;
-    background: #e3f2fd;
+    background: #e3fded;
 }
 
 .doc .code {
