@@ -52,10 +52,11 @@
                 <li>05. 화살표 함수 : 선언적 함수 </li>
                 <li>06. 화살표 함수 : 익명 함수 </li>
                 <li>07. 화살표 함수 : 리턴값 함수 </li>
-                <li>08. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 </li>
-                <li>09. 화살표 함수 </li>
-                <li>10. 화살표 함수 </li>
-                <li>11. 화살표 함수 </li>
+                <li>08. 화살표 함수 : 매개변수 함수</li>
+                <li>09. 화살표 함수 : 익명함수 + 매개변수 + 리턴값</li>
+                <li>10. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략 </li>
+                <li>11. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</li>
+                <li>12. 화살표 함수 : 선언적함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</li>
                 <li>12. 내부 함수 </li>
                 <li>13. 즉시실행 함수 </li>
                 <li>14. 파라미터 함수 </li>
@@ -91,7 +92,7 @@
                 </div>
                 <div class="result result-title01">
                     <h4>결과 보기</h4>
-                    <div class="result01"></div>
+                    <div class="result01 dn"></div>
                 </div>
             </div>
 
@@ -108,7 +109,7 @@
                 </div>
                 <div class="result result-title02">
                     <h4>결과 보기</h4>
-                    <div class="result02"></div>
+                    <div class="result02 dn"></div>
                 </div>
             </div>
 
@@ -125,7 +126,7 @@
                 </div>
                 <div class="result result-title03">
                     <h4>결과 보기</h4>
-                    <div class="result03"></div>
+                    <div class="result03 dn"></div>
                 </div>
             </div>
 
@@ -143,7 +144,7 @@
                 </div>
                 <div class="result result-title04">
                     <h4>결과 보기</h4>
-                    <div class="result04"></div>
+                    <div class="result04 dn"></div>
                 </div>
             </div>
 
@@ -165,7 +166,7 @@
                 </div>
                 <div class="result result-title05">
                     <h4>결과 보기</h4>
-                    <div class="result05"></div>
+                    <div class="result05 dn"></div>
                 </div>
             </div>
 
@@ -187,7 +188,7 @@
                 </div>
                 <div class="result result-title06">
                     <h4>결과 보기</h4>
-                    <div class="result06"></div>
+                    <div class="result06 dn"></div>
                 </div>
             </div>
 
@@ -209,7 +210,7 @@
                 </div>
                 <div class="result result-title07">
                     <h4>결과 보기</h4>
-                    <div class="result07"></div>
+                    <div class="result07 dn"></div>
                 </div>
             </div>
 
@@ -234,7 +235,71 @@
                 </div>
                 <div class="result result-title08">
                     <h4>결과 보기</h4>
-                    <div class="result08"></div>
+                    <div class="result08 dn"></div>
+                </div>
+            </div>
+
+            <!-- sample09 -->
+            <div id="sample9" class="sample">
+                <h3>09. 화살표 함수 : 익명함수 + 매개변수 + 리턴값</h3>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const func = (str) => {
+        return str;
+    }
+    document.write(func("함수가 실행되었습니다."));
+}</code></pre>
+                </div>
+                <div class="result result-title09">
+                    <h4>결과 보기</h4>
+                    <div class="result09 dn"></div>
+                </div>
+            </div>
+
+            <!-- sample10 -->
+            <div id="sample10" class="sample">
+                <h3>10. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략</h3>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const func = str => {
+        return str;
+    }
+    document.write(func("함수가 실행되었습니다."));
+}</code></pre>
+                </div>
+                <div class="result result-title10">
+                    <h4>결과 보기</h4>
+                    <div class="result10 dn"></div>
+                </div>
+            </div>
+
+            <!-- sample11 -->
+            <div id="sample8" class="sample">
+                <h3>11. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</h3>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const func = str => str;
+    document.write(func("함수가 실행되었습니다."));
+}</code></pre>
+                </div>
+                <div class="result result-title11">
+                    <h4>결과 보기</h4>
+                    <div class="result11 dn"></div>
+                </div>
+            </div>
+
+            <!-- sample12 -->
+            <div id="sample8" class="sample">
+                <h3>12. 화살표 함수 : 선언적함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</h3>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    func = str => str;
+    document.write(func("함수가 실행되었습니다."));
+}</code></pre>
+                </div>
+                <div class="result result-title12">
+                    <h4>결과 보기</h4>
+                    <div class="result12 dn"></div>
                 </div>
             </div>
         </div>
@@ -304,12 +369,39 @@
             document.querySelector('.result07').innerHTML = func();
         }
 
-        //08. 화살표 함수 : 익명함수 + 매개변수 + 리턴값
+        //08. 화살표 함수 : 매개변수 함수
         {
+            func = (str) => {
+                document.querySelector('.result08').innerHTML = func("함수가 실행되었습니다.");
+            }
+        }
+
+         //09. 화살표 함수 : 익명함수 + 매개변수 + 리턴값
+         {
             const func = (str) => {
                 return str;
             }
-            document.querySelector('.result08').innerHTML = func("함수가 실행되었습니다.");
+            document.querySelector('.result09').innerHTML = func("함수가 실행되었습니다.");
+        }
+        
+        //10. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략
+        {
+            const func = str => {
+                return str;
+            }
+            document.querySelector('.result10').innerHTML = func("함수가 실행되었습니다.");
+        }
+
+        //11. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호생략 + 리턴 생략
+        {
+            const func = str => str;
+            document.querySelector('.result11').innerHTML = func("함수가 실행되었습니다.");
+        }
+
+        //12. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호생략 + 리턴 생략
+        {
+            func = str => str;
+            document.querySelector('.result12').innerHTML = func("함수가 실행되었습니다.");
         }
     </script>
     </main>
