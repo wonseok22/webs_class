@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism2.css">
+
+    <!-- script -->
+    <script src = "assets/js/prism2.js"></script>
+
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        table td {
+            border: 1px solid rgb(255, 255, 255);
+            font-size: 16px;
+            padding: 10px;
+            font-family: "NexonLv1Gothic";
+        }
+    </style>
+</head>
+<body>
+
+    <div class="back"><a href="practice01.html">Back</a></div>
+    <main id ="main">
+        <div class="test">
+            <h2>1. 테이블 출력하기</h2>
+            <h3>1.1 for 문을 이용해서 테이블을 출력하시오 !</h3>
+            <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    var table = "&lt;table border='1'&gt;";
+        for (var i=0; i&lt;5; i++){
+            table += "&lt;tr&gt;";
+            for (var j=0; j&lt;5; j++){
+                table += "&lt;td&gt;1&lt;/td&gt;";
+            }
+            table += "&lt;/tr&gt;";
+        }
+        table += "&lt;/table&gt;";
+        document.querySelector('.tab').innerHTML= table;
+}</code></pre>
+            </div>
+            <div class="result">
+                <h4>결과 보기</h4>
+                <div class="result01"></div>
+            </div>
+            <!-- table 01 -->
+
+
+            <h3>1.2 for 문을 이용해서 테이블을 출력하시오 !</h3>
+            <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    var table = "&lt;table";
+    let num;
+    for (var i=0; i&lt;5; i++){
+        table += "&lt;tr&gt;";
+        for (var j=0; j&lt;5; j++){
+            num = i*5 + j + 1
+            table += "&lt;td&gt;" + num + "&lt;/td&gt;";
+        }
+        table += "&lt;/tr&gt;";
+    }
+    table += "&lt;/table&gt;";
+    document.querySelector('.tab').innerHTML= table;
+}</code></pre>
+            </div>
+            <div class="result">
+                <h4>결과 보기</h4>
+                <div class="result02"></div>
+            </div>
+            
+        </div>
+    </main>
+
+    <script src="assets/js/prism.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+        //01. 5x5 테이블 만들기
+        {
+            var table = "<table>";
+            for (var i=0; i<5; i++){
+                table += "<tr>";
+                for (var j=0; j<5; j++){
+                    table += "<td>1</td>";
+                }
+                table += "</tr>";
+            }
+            table += "</table>";
+            document.querySelector('.result01').innerHTML= table;
+        }
+
+
+        //02. 5x5 테이블에 1부터 25의 수 넣기
+        {
+            var table = "<table>";
+            let num;
+            for (var i=0; i<5; i++){
+                table += "<tr>";
+                for (var j=0; j<5; j++){
+                    num = i*5 + j + 1
+                    table += "<td>" + num + "</td>";
+                }
+                table += "</tr>";
+            }
+            table += "</table>";
+            document.querySelector('.result02').innerHTML= table;
+        }
+    </script>
+</body>
+</html>

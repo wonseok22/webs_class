@@ -1,6 +1,6 @@
 document.querySelectorAll('.result').forEach((el) => {
-    el.addEventListener('click',function(ele){
-        el.querySelector('div').classList.toggle("dn");
+    el.addEventListener('click',function(){
+        el.classList.toggle("dn");
     });
 });
 

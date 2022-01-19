@@ -114,13 +114,14 @@
                     <div class="view6"><img src="assets/img/image12.jpg" alt="이미지06"></div>
                 </div>
                 <div class="btn">
+                    <a href="#c" class="btn0">리셋</a>
                     <a href="#c" class="btn1">이 버튼을 클릭(selected)하면 두 번째 이미지가 선택 또는 해제됩니다.</a>
                     <a href="#c" class="btn2">이 버튼을 클릭(selected)하면 모든 이미지가 선택 또는 해제됩니다.</a>
                 </div>
                 <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     //두 번째 이미지 선택
-    document.querySelector('#sample2 .btn1').addEventListener('click', function (){
+    document.querySelector('#sample2 .btn1').addEventListener('click', function(){
        document.querySelector('#sample2 .view2').classList.toggle("selected"); 
     });
 
@@ -128,6 +129,20 @@
     document.querySelector('#sample2 .btn2').addEventListener('click', function(){
         document.querySelectorAll('#sample2 .view > div').forEach((ele) => {
             ele.classList.toggle("selected");
+        });
+    });
+
+    // 각각의 이미지를 클릭함녀 각각의 이미지를 선택/ 해제
+    document.querySelectorAll('#sample2 .view div').forEach((ele) => {
+        ele.querySelector('img').addEventListener('click', function(){
+            ele.classList.toggle("selected");
+        });
+    });
+    
+    //리셋
+    document.querySelector('#sample2 .btn0').addEventListener('click',function(){
+        document.querySelectorAll('#sample2 .view > div').forEach(function(el){
+            el.classList.remove("selected");
         });
     });
 }</code></pre>
@@ -148,7 +163,8 @@
                 </div>
                 <div class="btn">
                     <a href="#c" class="btn0">리셋</a>
-                    <a href="#c" class="btn1">이 버튼을 클릭하면 선택된 클래스(selected)를 찾은 후 색을 변경합니다.</a>
+                    <a href="#c" class="btn1">이 버튼을 클릭하면 선택된 클래스(selected)를 찾은 후 클래스를 삭제합니다.</a>
+                    <a href="#c" class="btn2">이 버튼을 클릭하면 선택된 클래스(selected)를 찾은 후 색을 변경합니다.</a>
                 </div>
                 <div class="code">
 <pre class="line-numbers"><code class="language-js">{
@@ -201,36 +217,49 @@
             });
         });
 
-        //각 이미지를 클릭하면 두 번째 이미지를 선택 또는 해제
+        // 각각의 이미지를 클릭함녀 각각의 이미지를 선택/ 해제
         document.querySelectorAll('#sample2 .view div').forEach((ele) => {
             ele.querySelector('img').addEventListener('click', function(){
                 ele.classList.toggle("selected");
+            });
+        });
+        
+        //리셋
+        document.querySelector('#sample2 .btn0').addEventListener('click',function(){
+            document.querySelectorAll('#sample2 .view > div').forEach(function(el){
+                el.classList.remove("selected");
             });
         });
 
         //sample03
         //리셋
         document.querySelector("#sample3 .btn0").addEventListener('click', function(){
-            document.querySelector("#sample3 .view2").classList.add("selected");
-            document.querySelector("#sample3 .view4").classList.add("selected");
-            document.querySelector("#sample3 .view6").classList.add("selected");
-            document.querySelector("#sample3 .view1").classList.remove("selected");
-            document.querySelector("#sample3 .view3").classList.remove("selected");
-            document.querySelector("#sample3 .view5").classList.remove("selected");
+            var i = 0
+            document.querySelectorAll("#sample3 .view > div").forEach(function(el){
+                el.classList.remove("blue", "selected");
+                if (i%2 == 1) {
+                    el.classList.add("selected");
+                }
+                i++;
+            });
         });
 
-        //이 버튼을 클릭하면 선택된 클래스(selected)를 찾은 후 색을 변경합니다.
+        //이 버튼을 클릭하면 선택될 클래스(selected)를 찾은 후 클래스를 삭제합니다.
         document.querySelector('#sample3 .btn1').addEventListener('click', function(){
-            document.querySelectorAll("#sample3 .view > div").forEach(function(ele){
-                if(ele.classList.contains("selected"))ele.classList.remove("selected");
-                else ele.classList.add("selected");
+            document.querySelectorAll('#sample3 .view > div').forEach(function(el){
+                el.classList.remove("selected");
             });
         })
 
         //이 버튼을 클릭하면 선택된 클래스(selected)를 찾은 후 색을 파란색으로 변경합니다.
-        // document.querySelector('#sample .btn1').addEventListener('click', function(){
-        //     document.querySelector()
-        // })
+        document.querySelector('#sample3 .btn2').addEventListener('click', function(){
+            document.querySelectorAll('#sample3 .view > div').forEach(function(el){
+                if (el.classList.contains("selected")) {
+                    el.classList.add('blue');
+                    el.classList.remove("selected");
+                }
+            });
+        })
     </script>
     </main>
 </body>
