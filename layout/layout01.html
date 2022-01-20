@@ -15,7 +15,7 @@
         body {
             background-color: #FFF3E0;
         }
-        #container {
+        #wrap {
             width: 1200px;
             height: 1080px;
             margin-left: auto;
@@ -24,41 +24,56 @@
         #header{
             width: 1200px;
             height: 100px;
-            background-color: #FAE1B7;
+            background-color: #ffe0b2;
         }
         #nav {
             width: 1200px;
             height: 100px;
-            background-color: #F7ce8b;
+            background-color: #ffcc80;
         }
         #aside {
             width: 400px;
             height: 780px;
-            background-color: #f4ba61;
-            float: left;
+            background-color: #ffb74e;
         }
         #contents {
+            height: 780px;
+            display: flex;
+        }
+        #contents .content {
             width: 800px;
             height: 780px;
-            background-color: #f2ab47;
-            float: left;
+        }
+        #contents .content .article1{
+            width: 800px;
+            height: 390px;
+            background-color: #e8ac56;
+        }
+        #contents .content .article2{
+            width: 800px;
+            height: 390px;
+            background-color: #ffa727;
         }
         #footer {
             width: 1200px;
             height: 100px;
-            background-color: #f19d38;
-            clear: both;
+            background-color: #ff9801;
         }
     </style>
 </head>
 
 <body>
-    <div id="container">
-        <div id="header"></div>
-        <div id="nav"></div>
-        <div id="aside"></div>
-        <div id="contents"></div>
-        <div id="footer"></div>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <section id="contents">
+            <aside id="aside"></aside>
+            <article class="content">
+                <article class="article1"></article>
+                <article class="article2"></article>
+            </article>
+        </section>
+        <footer id="footer"></footer>
     </div>
 </body>
 </html>

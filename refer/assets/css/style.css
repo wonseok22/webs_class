@@ -40,6 +40,11 @@
     padding: 0;
 }
 
+a {
+    color: #000;
+    text-decoration: none;
+}
+
 body {
     background: #F5F5F5;
 }
@@ -123,7 +128,7 @@ body {
 /* refer */
 .refer {
     background: #fff;
-    padding: 40px;
+    padding: 40px 0 0 40px;
     margin-bottom: 40px;
     border: 1px solid #000;
     overflow-x: auto;
@@ -134,8 +139,23 @@ body {
     width: 100%;
     border: 1px solid #aaa;
     border-collapse: collapse;
-    border-spacing: 0px
+    border-spacing: 0px;
 }
+.refer .title ul li{
+    display: inline;
+}
+.refer .title ul li a{
+    background-color: #00db72;
+    color: #fff;
+    padding: 6px 30px;
+    display: inline-block;
+    margin-bottom: 40px;
+}
+.refer .title ul li.active a{
+  background-color: #000;
+  color: fff;
+}
+
 
 .refer table tbody a{
     color: #00db72;

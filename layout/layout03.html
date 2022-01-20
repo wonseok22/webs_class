@@ -22,13 +22,13 @@
         #header {
             width: 1200px;
             height: 100px;
-            background-color: #BBDEFB;
+            background-color: #b3e5fc;
         }
 
         #nav {
             width: 1200px;
             height: 100px;
-            background-color: #90CAF9;
+            background-color: #81d5fa;
         }
 
         #contents {
@@ -39,7 +39,7 @@
         #contents .aside{
             width: 400px;
             height: 780px;
-            background-color: #64B5F6;
+            background-color: #4fc2f8;
         }
         
         #contents .content{
@@ -49,25 +49,37 @@
         #contents .content .article1{
             width: 800px;
             height: 260px;
-            background-color: #42A5F5;
+            display: flex;
+        }
+
+        #contents .content .article1-1{
+            width: 400px;
+            height: 260px;
+            background-color: #66c2eb;
+        }
+
+        #contents .content .article1-2{
+            width: 400px;
+            height: 260px;
+            background-color: #28b6f6;
         }
 
         #contents .content .article2{
             width: 800px;
             height: 260px;
-            background-color: #2196F3;
+            background-color: #03a9f5;
         }
         
         #contents .content .article3{
             width: 800px;
             height: 260px;
-            background-color: #1E88E5;
+            background-color: #039be6;
         }
 
         #footer {
             width: 1200px;
             height: 100px;
-            background-color: #1976D2;
+            background-color: #0288d1;
         }
     </style>
 </head>
@@ -78,7 +90,10 @@
         <main id="contents">
             <aside class="aside"></aside>
             <section class="content">
-                <article class="article1"></article>
+                <article class="article1">
+                    <article class="article1-1"></article>
+                    <article class="article1-2"></article>
+                </article>
                 <article class="article2"></article>
                 <article class="article3"></article>
             </section>
