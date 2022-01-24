@@ -12,3 +12,5 @@ https://wonseok22.github.io/webs_class/refer/html.html
 ## CSS 레퍼런스
 https://wonseok22.github.io/webs_class/refer/css.html
 
+## 웹표준 사이트 제작
+https://wonseok22.github.io/webs_class/site/webClass/index.html
