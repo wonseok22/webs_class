@@ -133,13 +133,18 @@ body {
     border: 1px solid #000;
     overflow-x: auto;
 }
+.refer .table h3 {
+    font-weight: normal;
+    margin-top : 80px;
+}
 
-.refer table {
+.refer .table table{
     overflow-x: auto;
-    width: 100%;
+    width: 91%;
     border: 1px solid #aaa;
     border-collapse: collapse;
     border-spacing: 0px;
+    margin: 0px 30px;
 }
 .refer .title ul li{
     display: inline;
@@ -179,6 +184,22 @@ body {
     padding: 15px;
     font-weight: 300;
     line-height: 1.4;
+}
+
+.refer .subTitle {
+    margin-top: 10px;
+}
+
+.refer .subTitle li {
+    display: inline-block;
+}
+
+.refer .subTitle li a{
+    margin-right: 10px;
+}
+
+.refer .subTitle li.active a {
+    border-bottom: 2px solid #000;
 }
 
 /* doc */
@@ -274,8 +295,8 @@ body {
     border-collapse: collapse;
     text-align: center;
     line-height: 1.5;
-    margin: 0px 10px 20px 0px;
-    width: 95%;
+    margin: 20px;
+    width: 100%;
     min-width: 800px;
 }
 

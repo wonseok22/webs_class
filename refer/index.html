@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML/CSS 레퍼런스 북</title>
+    
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assets/face/htmlcss.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/htmlcss.png">
+    <link rel="icon" href="../assets/face/htmlcss.png" sizes="128x128">
+
+
+    <!-- style -->
+    <style>
+        @font-face {
+            font-family: 'Jalnan';
+            font-weight: normal;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/goodchoice/Jalnan.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/goodchoice/Jalnan.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/goodchoice/Jalnan.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/goodchoice/Jalnan.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/goodchoice/Jalnan.ttf') format("truetype");
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Cafe24SsurroundAir';
+            font-weight: normal;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24SsurroundAir/Cafe24SsurroundAir.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24SsurroundAir/Cafe24SsurroundAir.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24SsurroundAir/Cafe24SsurroundAir.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24SsurroundAir/Cafe24SsurroundAir.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24SsurroundAir/Cafe24SsurroundAir.ttf') format("truetype");
+            font-display: swap;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        img {
+            width: 100%;
+        }
+        body {
+            background: #ffdbe5;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .sea {
+            width: 100%;
+            height: 30vh;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(To bottom, #FCC3CA 5%, #DFC8FA 70%);
+        }
+        .text {
+            position: absolute;
+            left : 50%;
+            top: 40%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        .text h1{
+            font-family: "Jalnan";
+            font-size: 6vw;
+            color: #eea7a5;
+            font-weight: normal;
+            -webkit-text-stroke: 2px #fff;
+        }
+
+        .text h1 strong {
+            color: #e16365;
+        }
+
+        .text h1 em{
+            font-style: normal;
+            color: #fff;
+            -webkit-text-stroke: 2px #6c4c4d;   
+        }
+
+        .text .subTitle {
+            font-family: "Cafe24SsurroundAir";
+            background: #eb6567;
+            color: #fff;
+            border-radius: 50px;
+            padding: 14px 60px 10px 60px;
+            margin-bottom: 30px;
+            display: inline-block;
+            font-size: 30px;
+            box-shadow: 3px 5px 0 0 #6c4c4d;
+        }
+        .text .subTitle::before {
+            content: '';
+            width: 10px; height: 10px;
+            border-radius: 50%;
+            background: #6c4c4d;
+            position: absolute;
+            left :30px; top: 10%;
+            margin-top: -5px;
+        }
+        .text .subTitle::after {
+            content: '';
+            width: 10px; height: 10px;
+            border-radius: 50%;
+            background: #6c4c4d;
+            position: absolute;
+            right :30px; top: 10%;
+            margin-top: -5px;
+        }
+        .ship {
+            width: 300px;
+        }
+        .love {
+            width: 300px;
+        }
+        .duck1 {
+            width: 30px;
+        }
+        .duck2 {
+            width: 30px;
+        }
+        .balloon {
+            width: 200px;
+        }
+        .cloud {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="sea"></div>
+        <div class="text">
+            <span class="subTitle">HTML/CSS 레퍼런스 북</span>
+            <h1><em>**</em> ****</h1>
+            <h1><strong>****</strong> <span>**</span></h1>
+        </div>
+        <div class="ship">
+            <img src="assets/img/ship.png">
+        </div>
+        <div class="love">
+            <img src="assets/img/image.png">
+        </div>
+        <div class="duck1">
+            <img src="assets/img/duck.png">
+        </div>
+        <div class="duck2">
+            <img src="assets/img/duck2.png">
+        </div>
+        <div class="balloon">
+            <img src="assets/img/balloon.png">
+        </div>
+        <div class="cloud">
+            <img src="assets/img/cloud.png">
+        </div>
+    </div>
+</body>
+</html>
