@@ -11,45 +11,38 @@
 
     #header {
         border-bottom: 1px solid #000;
+        display: flex;
+        padding: 10px;
+        min-width: 1400px;
+        white-space: nowrap;
     }
     #header .logo {
-        float: left;
         width: 20%;
+        padding: 15px 18px;
     }
     #header .logo a{
         font-size: 30px;
-        display: inline-block;
-        padding: 10px;
-        margin: 15px 18px
     }
     #header .logo a em{
         font-size: 18px;
         font-weight: 300;
     }
     #header .menu {
-        float: left;
         width: 60%;
         text-align: center;
     }
     #header .menu li{
-        display: inline;
-        vertical-align: middle;
-    }
-    #header .menu li a{
         display: inline-block;
-        padding: 31px 52px;
+        padding: 22px 30px 18px 30px;
     }
     #header .member {
-        float: left;
         width: 20%;
         text-align: right;
-        padding: 13px 18px;
+        margin: 23px 18px;
     }
     #header .member a{
-        display: inline-block;
         border: 1px solid #000;
         border-radius: 50px;
-        font-size: 18px;
-        margin: 10px 5px;
-        padding: 9px 22px 7px 22px;
+        padding: 8px 22px;
     }
+    

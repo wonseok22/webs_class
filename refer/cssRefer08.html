@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Reference</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assets/face/css.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/css.png">
+    <link rel="icon" href="../assets/face/css.png" sizes="128x128">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/prism.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    
+    <header id="header">
+        <h1><a href="css.html">라인 중학교 1학년 코딩반</a></h1>
+        <strong>한원석</strong>
+    </header>
+
+    <main id="contents">
+
+        <h2><a href="css.html">CSS <em>float 영역 깨짐 현상</em></a></h2>
+
+        <div class="menu">
+            <ul>
+                <li><a href="css.html">속성</a></li>
+                <li><a href="cssRefer01.html">기초 문법</a></li>
+                <li><a href="cssRefer02.html">Block/Inline</a></li>
+                <li><a href="cssRefer03.html">CSS 단위</a></li>
+                <li><a href="cssRefer04.html">CSS 색상</a></li>
+                <li><a href="cssRefer07.html">ID/CLASS 차이점</a></li>
+                <li class="active"><a href="cssRefer08.html">float영역 깨짐 현상</a></li>
+                
+                
+            </ul>
+        </div>
+        <!-- //menu -->
+
+
+        <div class="refer">
+            <div class="doc">
+                <h3>float 영역 깨짐 현상이란?</h3>
+                <p>CSS3에서 레이아웃 작업을 하다가 float:left를 사용하면 영역의 height값이 사라지는 깨짐 현상이 나타난다. </p>
+                <h3>영역 깨짐 현상 방지방법</h3>
+                <ul>
+                    <li>깨지는 영역에 float:left 사용</li>
+                    <p>모든 박스에 float: left를 사용해야 하며 구조가 복잡해 지면 어디에 float: left를 넣어야 할지 알기가 어려워지므로 사용하지 않는 것이 좋다.</p>
+                    <li>깨지는 영역에 Clear: both를 사용</li>
+                    <p>위치를 잡을 수 있으나 구조가 복잡할 때는 어떤 영역이 깨졌는지 찾기가 어렵기에 사용하지 않는 것이 좋다.</p>
+                    <li>Float을 사용한 상위 박스에게 Overflow: hidden을 사용</li>
+                    <p>현재 가장 많이 사용되는 방법이지만, 2단 메뉴 사용 시에는 사용 할 수 없다.</p>
+                    <li>clearfix를 사용</li>
+                    <p>특별한 문제점이 발생되지 않아 제일 많이 사용하는 방법이다. </p>
+                    <p>Float 속성을 Clearfix 하기 위해서 가상 선택자 ::after를 사용하면 된다. Float 속성을 적용한 요소들의 부모 컨테이너에 ::after 스타일을 추가하여 사용한다.</p>
+                </ul>
+            </div>
+        </div>
+        <!-- //refer -->
+    </main>
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</body>
+</html>

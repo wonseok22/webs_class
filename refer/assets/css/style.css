@@ -185,6 +185,7 @@ body {
 .doc {
     font-size: 18px;
     line-height: 1.8;
+    padding-bottom: 50px;
 }
 
 .doc h3 {
@@ -217,7 +218,8 @@ body {
 }
 
 .doc p {
-    margin-bottom: 5px;
+    margin-bottom: 20px;
+    padding-right: 40px;
 }
 
 .doc .line {
@@ -273,7 +275,7 @@ body {
     text-align: center;
     line-height: 1.5;
     margin: 0px 10px 20px 0px;
-    width: 100%;
+    width: 95%;
     min-width: 800px;
 }
 
