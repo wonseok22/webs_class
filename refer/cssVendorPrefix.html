@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Reference</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assets/face/css.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/css.png">
+    <link rel="icon" href="../assets/face/css.png" sizes="128x128">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/prism.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    
+    <header id="header">
+        <h1><a href="index.html">라인 중학교 1학년 코딩반</a></h1>
+        <strong>한원석</strong>
+    </header>
+
+    <main id="contents">
+
+        <h2><a href="css.html">CSS <em>벤더 프리픽스</em></a></h2>
+
+        <div class="menu">
+            <ul>
+                <li><a href="css.html">속성</a></li>
+                <li><a href="cssRefer01.html">기초 문법</a></li>
+                <li><a href="cssRefer02.html">Block/Inline</a></li>
+                <li><a href="cssRefer03.html">CSS 단위</a></li>
+                <li><a href="cssRefer04.html">CSS 색상</a></li>
+                <li><a href="cssRefer07.html">ID/CLASS 차이점</a></li>
+                <li><a href="cssRefer08.html">float영역 깨짐 현상</a></li>
+                <li class="active"><a href="cssVendorPrefix.html">벤더 프리픽스</a></li>
+                
+                
+            </ul>
+        </div>
+        <!-- //menu -->
+
+
+        <div class="refer">
+            <div class="doc">
+                <h3>벤더 프리픽스</h3>
+                <p>세계적으로 가장 많이 사용되는 웹 브라우저에는 익스플로러, 크롬, 파이어폭스, 사파리, 오페라 등이 있습니다.</p>
+                <br>
+                <p>벤더 프리픽스(vendor prefix)란 이러한 주요 웹 브라우저 공급자가 새로운 실험적인 기능을 제공할 때 이전 버전의 웹 브라우저에 그 사실을 알려주기 위해 사용하는 접두사(prefix)를 의미합니다. <br>
+
+                    즉 아직 CSS 권고안에 포함되지 못한 기능이나, CSS 권고안에는 포함되어 있지만 아직 완벽하게 제정된 상태가 아닌 기능을 사용하고자 할 때 벤더 프리픽스를 사용하게 됩니다. <br>
+                    
+                    그렇게 하면 해당 기능이 포함되어 있지 않은 이전 버전의 웹 브라우저에서도 그 기능을 사용할 수 있게 됩니다. <br></p>
+                <h3>주요 웹 브라우저의 벤더 프리픽스(vendor prefix)</h3>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td><img src="assets/img/IE.png"></td>
+                                <td><img src="assets/img/chrome.png"></td>
+                                <td><img src="assets/img/firefox.png"></td>
+                                <td><img src="assets/img/safari.png"></td>
+                                <td><img src="assets/img/opera.png"></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>-ms-</td>
+                                <td>-webkit-</td>
+                                <td>-moz-</td>
+                                <td>-webkit-</td>
+                                <td>-o-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3>벤더 프리픽스 사용예제</h3>
+                <div class="code">
+<pre><code>.button {
+
+    background: red;                                 &lt;!-- gradient 속성을 지원하지 않는 모든 브라우저를 위한 코드 --&gt;
+
+    background: -webkit-linear-gradient(red, yellow); &lt;!-- 크롬과 사파리 4.0 이상을 위한 코드 --&gt;
+
+    background: -moz-linear-gradient(red, yellow);    &lt;!-- 파이어폭스 3.6 이상을 위한 코드 --&gt;
+
+    background: -ms-linear-gradient(red, yellow);     &lt;!-- 익스플로러 10.0 이상을 위한 코드 --&gt;
+
+    background: -o-linear-gradient(red, yellow);      &lt;!-- 오페라 10.0 이상을 위한 코드 --&gt;
+
+    background: linear-gradient(red, yellow);         &lt;!-- CSS 표준 문법 코드 --&gt;
+
+}</code></pre>
+                </div>   
+                <p>위의 예제에서 가장 먼저 나오는 background 속성은 gradient 속성을 지원하지 않는 모든 브라우저를 위한 것입니다. <br>
+
+                    또한, 맨 마지막에 나오는 background 속성은 CSS 표준 문법으로 작성된 코드입니다. <br>
+                    
+                    CSS 표준 문법 코드는 벤더 프리픽스(vendor prefix)로 작성된 코드가 모두 나오고 난 후에 나와야만, 벤더 프리픽스가 포함된 코드가 정상적으로 동작할 수 있습니다. <br>
+                    
+                     
+                    
+                    이러한 벤더 프리픽스는 실험적인 해당 기능들이 CSS 표준 권고안에 포함되거나, 완벽하게 제정된 상태가 되면 더는 사용할 필요가 없어집니다. <br></p>
+
+            </div>
+        </div>
+        <!-- //refer -->
+    </main>
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</body>
+</html>
