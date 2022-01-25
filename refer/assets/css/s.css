@@ -33,11 +33,11 @@
         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.ttf') format("truetype");
     font-display: swap;
 }
-
 * {
-    font-family: 'GmarketSans';
     margin: 0;
     padding: 0;
+    font-family: 'GmarketSans';
+    overflow-x: hidden;
 }
 
 a {
@@ -45,8 +45,13 @@ a {
     text-decoration: none;
 }
 
+li {
+    list-style: none;
+}
+
 body {
     background: #F5F5F5;
+    
 }
 
 #header {
@@ -76,11 +81,11 @@ body {
     padding: 10px 20px 10px 10px;
 }
 
-/* contents */
 #contents {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+    margin-bottom: 100px;
 }
 
 #contents h2 {
@@ -98,9 +103,6 @@ body {
     color: #000;
     text-decoration: none;
 }
-#contents .refer table caption{
-    text-indent: -9999px;
-}
 
 /* menu */
 .menu {
@@ -109,7 +111,8 @@ body {
 
 .menu ul li {
     list-style: none;
-    display: inline;
+    display: inline-block;
+    margin-bottom: 5px;
 }
 
 .menu ul li a {
@@ -120,117 +123,107 @@ body {
     display: inline-block;
 }
 
-.menu ul .active a {
-    color: #00DB72;
+.menu ul li.active a {
     background: #000;
+    color: #00DB72;
 }
 
 /* refer */
 .refer {
     background: #fff;
     padding: 40px;
-    margin-bottom: 40px;
     border: 1px solid #000;
-    overflow-x: auto;
-}
-.refer .table h3 {
-    font-weight: normal;
+    /* overflow-x: auto; */
 }
 
-.refer .table table{
-    overflow-x: auto;
-    width: 100%;
-    border: 1px solid #aaa;
-    border-collapse: collapse;
-    border-spacing: 0px;
-
-    margin-bottom: 50px;
-}
-.refer .title ul li{
+.refer .title li {
     display: inline;
 }
-.refer .title ul li a{
+
+.refer .title li a {
     background-color: #00db72;
     color: #fff;
     padding: 6px 30px;
     display: inline-block;
-    margin-bottom: 40px;
-}
-.refer .title ul li.active a{
-  background-color: #000;
-  color: fff;
+    margin-bottom: 5px;
 }
 
-
-.refer table tbody a{
-    color: #00db72;
+.refer .title li.active a {
+    background-color: #000;
+    color: #fff;
 }
 
-.refer table tbody a:hover{
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+.refer .subTitle {
+    margin-top: 10px;
 }
 
+.refer .subTitle li{
+    display: inline-block;
+}
+.refer .subTitle li a {
+    display: inline-block;
+    margin-right: 10px;
+}
+.refer .subTitle li.active a{
+    border-bottom: 2px solid #000;
+}
 
-.refer table th {
+.refer .table {
+    margin-top: 40px;
+    overflow-x: auto;
+}
+
+.refer .table h3{
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.refer .table table {
+    width: 100%;
+    border: 1px solid #aaa;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    min-width: 800px;
+}
+
+.refer .table table th {
     border: 1px solid #aaa;
     padding: 15px;
-    background: #f5f5f5;
+    background: #F5F5F5;
     font-weight: 500;
 }
 
-.refer table td {
+.refer .table table th a {
+    color: #00DB72;
+}
+
+.refer .table table td {
     border: 1px solid #aaa;
     padding: 15px;
     font-weight: 300;
     line-height: 1.4;
 }
 
-.refer .subTitle {
-    margin: 15px 0;
-}
-
-.refer .subTitle li {
-    display: inline-block;
-}
-
-.refer .subTitle li a{
-    margin-right: 10px;
-}
-
-.refer .subTitle li.active a {
-    border-bottom: 2px solid #000;
-}
-
 /* doc */
 .doc {
     font-size: 18px;
     line-height: 1.8;
-    padding-bottom: 50px;
 }
 
 .doc h3 {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 500;
     margin: 40px 0 5px;
-    padding: 15px 3px;
 }
 
-.doc h3:first-child{
+.doc h3:first-child {
     margin-top: 0;
 }
 
 .doc h4 {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 700;
     margin: 20px 0 5px;
-}
-
-.doc h5 {
-    font-size: 20px;
-    font-weight: 700;
-    margin: 20px 0 5px;
-    padding-top: 40px;
 }
 
 .doc li {
@@ -239,148 +232,118 @@ body {
 }
 
 .doc p {
-    margin-bottom: 20px;
-    padding-right: 40px;
+    margin-bottom: 5px;
 }
 
 .doc .line {
-    border: 1px solid #000;
+    border: 1px solid #CDCDCD;
     padding: 20px 20px 15px 20px;
     border-radius: 10px;
-    background: #e3fded;
+    overflow-x: auto;
 }
 
 .doc .code {
+    padding: 20px 20px 15px 20px;
+    border-radius: 10px;
+    background: #DEDEDE;
+    margin-bottom: 10px;
     overflow-x: auto;
-    border: 1px solid #cdcdcd;
-    border-radius: 5px;
-    background: #e1fdf0;
-    margin-bottom: 50px;
-    margin-top: 5px;
-    padding-right: 15px;
-}
-
-.doc .code pre {
-    min-width: 0.5em;
-    width:100%;
-}
-
-.doc .code h5{
-    padding: 10px 0 10px 20px;
-}
-
-.doc .code p{
-    padding: 15px 0 15px 30px;
-}
-
-.doc .code pre{
-    margin: 15px 0 15px 15px;
 }
 
 .doc strong {
-    background: #00db72;
+    background: #00DB72;
     font-weight: normal;
     border-radius: 20px;
-    padding: 0px 10px 0px 10px;
+    padding: 2px 15px 0px 15px;
     display: inline-block;
-    color: white;
+    color: #fff;
 }
 
-/* doc table */
-.doc .table {
-    overflow-x: auto;
-}
-
-.doc .table table {
-    border-collapse: collapse;
-    text-align: center;
-    line-height: 1.5;
-    margin: 20px;
-    width: 100%;
-    min-width: 800px;
-}
-
-.doc .table table th {
-    padding: 10px;
-    font-weight: bold;
-    vertical-align: top;
-    border: 1px solid #cdcdcd;
-    color: #000;
-    background: #bbfbdd ;
-}
-
-.doc .table table td {
-    padding: 5px;
-    border: 1px solid #cdcdcd;
-    vertical-align: middle;
-    background: #fff;
-    
-}
-/* //doc table */
 @media (max-width: 1220px) {
     #contents {
         width: 96%;
     }
 }
-@media (max-width: 800px){
+
+@media (max-width: 800px) {
+    #contents {
+        width: 100%;
+    }
+
     #header h1 {
         font-size: 18px;
         padding: 20px 10px 5px 16px;
     }
+
     #header strong {
         font-size: 14px;
         padding: 20px 10px 5px 16px;
     }
-    #contents {
-        width: 100%;
-        margin-bottom: 100px;
-    }
+
     #contents h2 {
         font-size: 40px;
         padding: 80px 0 40px 0;
     }
+
     .menu {
-        margin: 16px 16px 0px 16px;
+        margin: 16px 16px 0 16px;
     }
+
     .refer {
         background: transparent;
         border: 0;
         font-size: 14px;
         padding: 16px;
     }
-    .refer .table {
+
+    .refer .table table {
         min-width: 400px;
     }
-    .refer .table th {
+
+    .refer .table table th {
         padding: 10px;
     }
-    .refer .table td {
+
+    .refer .table table td {
         padding: 10px;
     }
+
     .doc {
         font-size: 16px;
     }
+
     .doc h3 {
         font-size: 20px;
     }
-    .doc .line {
-        padding: 10px 15px;
-    }
+
     .doc .code {
-        min-width: 500px;
-        padding : 10px 5px;
-        font-size: 12px;
+        margin-bottom: 8px;
     }
-    .doc .code p {
-        padding: 0 5px;
-    }
-    .doc .code h5{
-        padding-left: 10px;
-        font-size: 15px;
-    }
-    .doc .table table {
-        width: 100%;
-    }
-
-
 }
+
+/* 간격 설정 */
+.mt0 { margin-top: 0px !important; }
+.mt5 { margin-top: 5px !important; }
+.mt10 { margin-top: 10px !important; }
+.mt15 { margin-top: 15px !important; }
+.mt20 { margin-top: 20px !important; }
+.mt25 { margin-top: 25px !important; }
+.mt30 { margin-top: 30px !important; }
+.mt35 { margin-top: 35px !important; }
+.mt40 { margin-top: 40px !important; }
+.mt45 { margin-top: 45px !important; }
+.mt50 { margin-top: 50px !important; }
+.mt55 { margin-top: 55px !important; }
+
+.mb0 { margin-bottom: 0px !important; }
+.mb5 { margin-bottom: 5px !important; }
+.mb10 { margin-bottom: 10px !important; }
+.mb15 { margin-bottom: 15px !important; }
+.mb20 { margin-bottom: 20px !important; }
+.mb25 { margin-bottom: 25px !important; }
+.mb30 { margin-bottom: 30px !important; }
+.mb35 { margin-bottom: 35px !important; }
+.mb40 { margin-bottom: 40px !important; }
+.mb45 { margin-bottom: 45px !important; }
+.mb50 { margin-bottom: 50px !important; }
+.mb55 { margin-bottom: 55px !important; }
