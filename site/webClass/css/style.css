@@ -1,5 +1,9 @@
 /* 전체 레이아웃 */
-#wrap {}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
 
 
 
@@ -94,6 +98,7 @@
 } */
 
 /* 헤더 03 grid를 사용하는 경우 */
+
 #header {
     border-bottom: 1px solid #000;
     display: grid;
@@ -146,9 +151,6 @@
 
 /* 배너 */
 
-#banner {
-
-}
 .imgType {
     width: 100%;
     height: 800px;
@@ -157,7 +159,6 @@
     background-repeat: no-repeat; 
     background-image: url(../img/bg01.jpg);
     */
-    background: url(../img/bg01.jpg) no-repeat center / cover;
 }
 
 /* 
@@ -166,3 +167,67 @@
     2. CSS 속성 : background속성 : 의미가 없는 이미지 -> ir효과
     3. 이미지 스프라이트 : background와 ir효과를 통해서 이미지 표현
 */
+
+.container {
+    
+}
+
+/* 이미지/텍스트 유형 */
+
+ /* 유형1 */
+ .itType01 {
+    padding: 150px 0;
+    overflow: hidden;
+ }
+ .itType01 .text {
+    float: left;
+    width: 386.66px;
+    height: 530px;
+    margin-right: 20px;
+    background-color: #ccc;
+ }
+ .itType01 .img1 {
+    float: left;
+    width: 386.66px;
+    height: 530px;
+    margin-right: 20px;
+    background-image: url(../img/test@1x.jpg);
+    background-size: 100%;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5){
+    .itType01 .img1 {
+        background-image: url(../img/test@2x.jpg);
+    }
+}
+@media (-webkit-min-device-pixel-ratio: 2.5){
+    .itType01 .img1 {
+        background-image: url(../img/test@3x.jpg);
+    }
+}
+ /* .itType01 .img1 {
+    float: left;
+    width: 386.66px;
+    height: 530px;
+    margin-right: 20px;
+    background-color: #ccc;
+    background-image: url(../img/img_text_bg1-min.jpg);
+ }
+ .itType01 .img2 {
+     float: left;
+     width: 386.66px;
+     height: 530px;
+     background-color: #ccc;
+     background-image: url(../img/img_text_bg2-min.jpg);
+ }
+
+ @media(-webkit-min-dvice-pixel-ratio: 2){
+     .itType01 .img1 {
+         background-image: url(../img/img_text_bg1@2x.jpg);
+     }
+ }
+ @media(-webkit-min-dvice-pixel-ratio: 2){
+    .itType01 .img1 {
+        background-image: url(../img/img_text_bg1@2x.jpg);
+    }
+ } */
+ 
