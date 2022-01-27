@@ -151,14 +151,14 @@
 
 /* 배너 */
 
-.imgType {
+.img_type {
     width: 100%;
     height: 800px;
-    /* background-size: cover;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat; 
-    background-image: url(../img/bg01.jpg);
-    */
+    background-image: url(../img/img_text_bg0-min.jpg);
+    
 }
 
 /* 
