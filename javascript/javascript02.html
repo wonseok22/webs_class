@@ -582,6 +582,126 @@
 
             document.querySelector(".result15").innerHTML = name1 + "<br>" + name2 + "<br>" + name3; 
         }
+
+        //16. 객체 : 데이터 불러오기 : for in 문
+        {
+            const obj = {
+                a: 100,
+                b: 200,
+                c: "javascript"
+            }
+
+
+            for(let i in obj){
+                console.log(i)
+            }
+        }
+
+        //17. 객체 : 데이터 불러오기 : map()
+        {
+            const obj = [{
+                a: 100,
+                b: 200,
+                c: "javascript"
+            }]
+
+            obj.map(function(ele){
+                console.log(ele.a)
+                console.log(ele.b)
+                console.log(ele.c)
+            })
+        }
+
+        //18. 객체 : 데이터 불러오기 : hasOwnProperty()
+        {
+            const obj = {
+                a: 100,
+                b: 200,
+                c: "javascript"
+            }
+            console.log(obj.hasOwnProperty('a'));
+            console.log(obj.hasOwnProperty('b'));
+            console.log(obj.hasOwnProperty('c'));
+            console.log(obj.hasOwnProperty('d'));
+            console.log('a' in obj);
+            console.log('b' in obj);
+            console.log('c' in obj);
+            console.log('d' in obj);
+        }
+
+        //19. 객체 : 데이터 불러오기 : 펼침 연산자 - 복사
+        {
+            const obj = {
+                a: 100,
+                b: 200,
+                c: "javascript"
+            }
+            
+            const spread = {...obj}
+            console.log(spread.a);
+            console.log(spread.b);
+            console.log(spread.c);
+            console.log(spread.d);
+        }
+
+        //20. 객체 : 데이터 불러오기 : 펼침 연산자 - 추가
+        {
+            const obj = {
+                a: 100,
+                b: 200,
+                c: "javascript"
+            }
+            
+            const spread = {...obj, d: "jquery"}
+            console.log(spread.a);
+            console.log(spread.b);
+            console.log(spread.c);
+            console.log(spread.d);
+        }
+
+        //21. 객체 : 데이터 불러오기 : 펼침 연산자 - 결합
+        {
+            const obj = {
+                a: 100,
+                b: 200,
+                c: "javascript"
+            }
+            
+            const spread = {...obj, d: "jquery"}
+            console.log(spread.a);
+            console.log(spread.b);
+            console.log(spread.c);
+            console.log(spread.d);
+        }
+        
+        //22. 객체 : 데이터 불러오기 : 비구조화 할당
+        {
+            const obj = {
+                a: 100,
+                b: 200,
+                c: "javascript"
+            }
+            
+            const {a,b,c} = obj;
+            document.write(a);
+            document.write(b);
+            document.write(c);
+        }
+
+        //23. 객체 : 데이터 불러오기 : 비구조화 할당
+        {
+            const obj = {
+                a: 100,
+                b: 200,
+                c: "javascript"
+            }
+            
+            const {a,b,c} = obj;
+            document.write(a);
+            document.write(b);
+            document.write(c);
+        }
+
     </script>
 </body>
 </html>

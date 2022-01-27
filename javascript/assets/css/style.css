@@ -504,7 +504,16 @@ img {
         font-size: 55px;
         padding: 10px 0;
     }
-}
+    .javascript .menu ul:nth-child(2) {
+        display: none;    
+    }
+    .javascript .menu ul:nth-child(3) {
+        display: none;    
+    }
+    .javascript .menu ul:nth-child(4) {
+        display: none;    
+    }
+}   
 
 /* test */
 .test {
