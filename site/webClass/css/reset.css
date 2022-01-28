@@ -25,8 +25,7 @@ figure, figcaption {
     transition: left 0.3s ease-in;
 }
 
-#skip a:active {}
-
+#skip a:active,
 #skip a:focus {
     left: 5px;
 }
@@ -79,6 +78,7 @@ ir_so : 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제�
     text-indent: -9999px;
 }
 /* 폰트 초기화 */
+
 
 body,button,input,select,table,textarea {
     color: #222;
