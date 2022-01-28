@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 표준 사이트 만들기</title>
+    
+    <!-- SEO(검색엔진최적화) -->
+    <meta name="author" content="webstoryboy">
+    <meta name="description" content="웹 표준을 준수한 사이트입니다.">
+    <meta name="keywords" content="웹표준, 웹접근성, 웹호환성, 사이트제작">
+    <meta name="robots" content="all">
+
+    <!-- 메타정보 -->
+    <meta property="og:title" content="웹 표준 사이트 제작">
+    <meta property="og:url" content="https://wonseok22.github.io/webs_class/site/webClass/index.html">
+    <meta property="og:image" content="https://wonseok22.github.io/webs_class/site/webClass/img/icon.png">
+    <meta property="og:description" content="웹 표준을 준수한 사이트입니다." >
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="웹 표준 사이트 제작">
+    <meta name="twitter:url" content="https://wonseok22.github.io/webs_class/site/webClass/index.html">
+    <meta name="twitter:image" content="https://wonseok22.github.io/webs_class/site/webClass/img/icon.png">
+    <meta name="twitter:description" content="웹 표준을 준수한 사이트입니다." >
+
+    <!-- 아이콘 & 파비콘 -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" >
+    <link rel="apple-touch-icon" sizes="114x114" href="img/icon114.png" >
+    <link rel="apple-touch-icon" href="img/icon114.png" >
+    <link rel="apple-touch-icon-precomposed" href="img/icon.png" >
+    <link rel="apple-touch-icon-precomposed" sizes="167x167" href="img/icon167.png" >
+
+    <!-- CSS style -->
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <!--style -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #FFF3E0;
+        }
+        #wrap {
+            width: 1920px;
+            height: 1080px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: rgb(126, 122, 122);
+        }
+        #header{
+            width: 1920px;
+            height: 110px;
+            background-color: #ffe0b2;
+        }
+        #header .container{
+            width: 1200px;
+            margin: 0 auto;
+            height: 110px;
+            background-color: #aa9b85;
+        }
+        #banner {
+            width: 1920px;
+            height: 893px;
+            background-color: #ffcc80;
+        }
+        #banner .container{
+            width: 1200px;
+            margin: 0 auto;
+            height: 893px;
+            background-color: #644e2c;
+        }
+
+        #contents .content1{
+            margin: 0 auto;
+            width: 1920px;
+            height: 640px;
+            background-color: rgb(252, 190, 190);
+        }
+        #contents .content1 .container {
+            margin: 0 auto;
+            width: 1200px;
+            height: 640px;
+            background-color: rgb(255, 153, 153);
+        }
+        #contents .content2 {
+            margin: 0 auto;
+            width: 1920px;
+            height: 3500px;
+            background-color: rgb(173, 141, 141);
+        }
+        #contents .content2 .container{
+            margin: 0 auto;
+            width: 1200px;
+            height: 3500px;
+            background-color: rgb(151, 106, 106);
+        }
+        
+        #contents .content3 {
+            margin: 0 auto;
+            width: 1920px;
+            height: 1080px;
+            background-color: rgb(255, 255, 255);
+        }
+        #contents .content3 .container{
+            padding-top: 120px;
+            margin: 0 auto;
+            width: 1200px;
+            height: 1080px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        #contents .content3 .container .title {
+            font-family: 'NEXONLv1Gothic';
+            font-size: 42px;
+            font-weight: 1000;
+        }
+        #contents .content3 .container .imgBox {
+            width: 100%;
+            display: flex;
+            margin: 0 auto;
+            padding: 108px 0px 0px 0;
+        }
+        #contents .content3 .container .imgBox .p1{
+            margin-right: 50px;
+            height: 466px;
+            width: 367px;
+            background: url(./img/img_text_bg2-min.jpg) no-repeat center center;
+            
+        }
+        #contents .content3 .container .imgBox .p2{
+            margin-right: 50px;
+            height: 466px;
+            width: 367px;
+            background: url(./img/img_text_bg1-min.jpg) no-repeat center center;
+        }
+        #contents .content3 .container .imgBox .p3{
+            height: 466px;
+            width: 367px;
+            background: url(./img/img_text_bg3-min.jpg) no-repeat center center;
+        }
+
+        #contents .content3 .container .textBox {
+            width: 100%;
+            display: flex;
+            padding: 31px 0px 0px 0;
+        }
+        #contents .content3 .container .textBox em{
+            font-size: 24px;
+            display: block;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        #contents .content3 .container .textBox .t1{
+            margin-right: 50px;
+            height: 65px;
+            width: 367px;
+        }
+        #contents .content3 .container .textBox .t2{
+            margin-right: 50px;
+            height: 65px;
+            width: 367px;
+        }
+        #contents .content3 .container .textBox .t3{
+            height: 65px;
+            width: 367px;
+        }
+                
+        #footer {
+            width: 1920px;
+            height: 400px;
+            background-color: #ff9801;
+            margin: 0 auto;
+        }
+        #footer .container {
+            width: 1200px;
+            height: 400px;
+            background-color: #ffe6c1;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"><div class="container"></div></header>
+        <nav id="banner"><div class="container"></div></nav>
+        <section id="contents">
+            <!-- content1 -->
+            <article class="content1">
+                <div class="container"></div>
+            </article>
+            <!-- content2 -->
+            <article class="content2">
+                <div class="container"></div>
+            </article>
+            <!-- content3 -->
+            <article class="content3">
+                <div class="container">
+                    <p class="title">FIND opportunities</p>
+                    <div class="imgBox">
+                        <div class="p1"></div>
+                        <div class="p2"></div>
+                        <div class="p3"></div>
+                    </div>
+                    <div class="textBox">
+                        <p class="t1">
+                            <em>Fintech</em>
+                            Payment
+                        </p>
+                        <p class="t2">
+                            <em>Digital Marketing</em>
+                            IMS
+                        </p>
+                        <p class="t3">
+                            <em>Platform</em>
+                            Commerce, Magazine
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <footer id="footer">
+            <div class="container"></div>
+        </footer>
+    </div>
+        
+</body>
+</html>
