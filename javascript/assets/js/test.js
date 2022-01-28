@@ -207,3 +207,15 @@ const t8 = (nums) => {
 console.log(t8("2 4 7 8 10"));
 console.log(t8("1 2 1 1"));
     
+
+let zz = 0;
+while (true){
+    zz ++;
+    if (zz==3){
+        continue
+    }
+    if (zz > 6){
+        break;
+    }
+    console.log(zz)
+}

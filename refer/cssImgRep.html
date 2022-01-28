@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Reference</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/css.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/css.png">
+    <link rel="icon" href="../assets/face/css.png" sizes="128x128">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+</head>
+
+<body>
+
+    <header id="header">
+        <h1><a href="index.html">라인 중학교 1학년 코딩반</a></h1>
+        <strong>류성일</strong>
+    </header>
+
+    <main id="contents">
+        <h2><a href="css.html">CSS <em>이미지 표현</em></a></h2>
+
+        <div class="menu">
+            <ul>
+                <li><a href="css.html">속성</a></li>
+                <li><a href="cssRefer01.html">기초 문법</a></li>
+                <li><a href="cssRefer02.html">Block/Inline</a></li>
+                <li><a href="cssRefer03.html">CSS 단위</a></li>
+                <li><a href="cssRefer04.html">CSS 색상</a></li>
+                <li><a href="cssRefer07.html">ID/CLASS 차이점</a></li>
+                <li><a href="cssRefer08.html">float영역 깨짐 현상</a></li>
+                <li><a href="cssVendorPrefix.html">벤더 프리픽스</a></li>
+                <li class="active"><a href="cssImgRep.html">이미지 표현</a></li>
+                <li><a href="cssRefer09.html">IR 기법</a></li>
+            </ul>
+        </div>
+        <!-- //menu -->
+
+        <div class="refer">
+            <div class="doc">
+                <h3>웹 사이트에서 이미지를 표현하는 방법</h3>
+                <p>
+                    웹 사이트에서 이미지를 표현하는 방법은 아래 세 가지 입니다.
+                </p>
+
+                <h4>1. img 태그를 통해서 표현하는 방법(HTML 태그)</h4>
+
+                <p>
+                    이미지의 의미가 있을 때 img 태그를 사용합니다.
+                    이 때에는 alt 태그를 이용해 대체 문자를 적어야 합니다.
+                    여기서 대체 문자란, 이미지가 없을 때 출력할 수 있는 문자를 의미합니다.
+                </p>
+
+                <div class="code">
+                    <pre><code>&lt;img src="이미지경로" alt="대체 문자"&gt;</code></pre>
+                </div>
+
+
+
+                <h4>2. CSS 속성을 통해서 표현하는 방법</h4>
+                <p>
+                    이미지의 의미가 없을 때 background 속성을 사용합니다.
+                    이미지의 의미가 없기 때문에 대체 문자를 적을 필요가 없습니다.
+                </p>
+
+                <div class="code">
+                    <pre><code>a { 
+    background: url(이미지 경로)
+}</code></pre>
+                </div>
+
+                <h4>3. 이미지 스프라이트 기법으로 표현하는 방법</h4>
+                <p>
+                    여러 개의 이미지를 하나의 이미지로 합쳐서 관리하는 기법입니다.
+                    이 기법을 사용하면 이미지 관리가 용이하며, 웹페이지의 로딩 시간 및 용량을 줄일 수 있습니다.
+                    대신 이미지를 넣을 때는 웹표준 준수를 위해 가상으로 대체 문자를 만들어야 합니다.
+                    개인이 운영하는 블로그는 굳이 이미지 스프라이트를 사용할 필요는 없지만,
+                    트래픽이 아주 많거나 많은 사람들이 이용하는 검색포털과 같은 사이트에서는 아이콘 형식의 이미지들을 이미지 스프라이트를 사용합니다.
+                    이 때, 가상으로 대체 문자를 만들어 주기 위해서는 IR 기법을 사용합니다. <br>
+                    IR 기법(Image Replacement)이란  이미지의 대체 텍스트를 제공하기 위한 CSS 기법으로,
+                    다양한 CSS 기법을 사용하여 이미지의 대체 텍스트를 제공할 수 있습니다. 
+                    스프라이트 기법의 단점은 이미지 수정이 번거롭다는 점이 있습니다. 
+                </p>
+
+                <div class="code">
+                    <pre><code>.sprite {
+    background: url(이미지 경로) no-repeat-274px -68px;
+    width: 53px;
+    height: 57px;
+}</code></pre>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- //refer -->
+    </main>
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</body>
+
+</html>

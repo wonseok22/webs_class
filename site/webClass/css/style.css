@@ -158,7 +158,6 @@
     background-position: center;
     background-repeat: no-repeat; 
     background-image: url(../img/img_text_bg0-min.jpg);
-    
 }
 
 /* 
@@ -308,4 +307,68 @@
     padding: 9px 46px;
     display: inline-block;
     color: #fff;
+}
+/* //itType02 */
+
+
+.itType03 {
+    overflow: hidden;
+    padding: 150px 0;
+    min-width: 1200px;
+}
+
+.itType03 .title {
+    font-family: 'NEXONLv1Gothic';
+    font-size: 42px;
+    font-weight: 1000;
+}
+.itType03 .imgBox {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    padding: 108px 0px 0px 0;
+}
+.itType03 .imgBox .p1{
+    margin-right: 50px;
+    height: 466px;
+    width: 367px;
+    background: url(../img/img_text_bg2-min.jpg) no-repeat center center;
+    
+}
+.itType03 .imgBox .p2{
+    margin-right: 50px;
+    height: 466px;
+    width: 367px;
+    background: url(../img/img_text_bg1-min.jpg) no-repeat center center;
+}
+.itType03 .imgBox .p3{
+    height: 466px;
+    width: 367px;
+    background: url(../img/img_text_bg3-min.jpg) no-repeat center center;
+}
+
+.itType03 .textBox {
+    width: 100%;
+    display: flex;
+    padding: 31px 0px 0px 0;
+}
+.itType03 .textBox em{
+    font-size: 24px;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.itType03 .textBox .t1{
+    margin-right: 50px;
+    height: 65px;
+    width: 367px;
+}
+.itType03 .textBox .t2{
+    margin-right: 50px;
+    height: 65px;
+    width: 367px;
+}
+.itType03 .textBox .t3{
+    height: 65px;
+    width: 367px;
 }
