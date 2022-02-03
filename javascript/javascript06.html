@@ -75,15 +75,175 @@
             </ul>
         </div>
         <!-- //list -->
+        
+        
+        <div class="script">
+            
+             <!-- sample01 -->
+             <div id="sample1" class="sample">
+                <h3>01. 배열 속성 : length : 배열 길이 구하기 : 반환(숫자)</h3>
+                <div class="table">
+                    <table>
+                        <colgroup>
+                            <col style="width:4%;">
+                            <col style="width:32%;">
+                            <col style="width:22%;">
+                            <col style="width:42%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>기본값</th>
+                                <th>메서드</th>
+                                <th>결괏값</th>
+                            </tr>                          
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="sample01_N1"></td>
+                                <td class="sample01_Q1"></td>
+                                <td class="sample01_M1"></td>
+                                <td class="sample01_R1"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample01_N2"></td>
+                                <td class="sample01_Q2"></td>
+                                <td class="sample01_M2"></td>
+                                <td class="sample01_R2"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample01_N3"></td>
+                                <td class="sample01_Q3"></td>
+                                <td class="sample01_M3"></td>
+                                <td class="sample01_R3"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const arrNum = [100, 200, 300, 400, 500];
+    document.querySelector('.sample01_N1').innerHTML = 1;
+    document.querySelector('.sample01_N1').innerHTML = "[100, 200, 300, 400, 500]";
+    document.querySelector('.sample01_N1').innerHTML = ".lenght";
+    document.querySelector('.sample01_N1').innerHTML = arrNum.length;
 
- 
+    const arrText = ["a", "b", "c", "d", "e"];
+    document.querySelector('.sample01_N2').innerHTML = 2;
+    document.querySelector('.sample01_Q2').innerHTML = '["a", "b", "c", "d", "e"]';
+    document.querySelector('.sample01_M2').innerHTML = ".lenght";
+    document.querySelector('.sample01_R2').innerHTML = arrText.length;
+
+    const arr = [1, 2, ['a', 'b']];
+    document.querySelector('.sample01_N3').innerHTML = 3;
+    document.querySelector('.sample01_Q3').innerHTML = "[1, 2, ['a', 'b']]";
+    document.querySelector('.sample01_M3').innerHTML = ".lenght";
+    document.querySelector('.sample01_R3').innerHTML = arr.length;
+}</code></pre>
+                </div>
+            </div>
+
+
+             <!-- sample02 -->
+             <div id="sample2" class="sample">
+                <h3>02. 배열 메서드 : join() : 배열 요소 문자열 결합 : 반환(문자열)</h3>
+                <div class="table">
+                    <table>
+                        <colgroup>
+                            <col style="width:4%;">
+                            <col style="width:32%;">
+                            <col style="width:22%;">
+                            <col style="width:42%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>기본값</th>
+                                <th>메서드</th>
+                                <th>결괏값</th>
+                            </tr>                          
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="sample02_N1"></td>
+                                <td class="sample02_Q1"></td>
+                                <td class="sample02_M1"></td>
+                                <td class="sample02_R1"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample02_N2"></td>
+                                <td class="sample02_Q2"></td>
+                                <td class="sample02_M2"></td>
+                                <td class="sample02_R2"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample03_N3"></td>
+                                <td class="sample03_Q3"></td>
+                                <td class="sample03_M3"></td>
+                                <td class="sample03_R3"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+
+}</code></pre>
+                </div>
+            </div>
+
+
+
+        </div>
+        <!-- //script -->
     </main>
 
-    <!-- script -->
+    <!-- script sample code-->
     
     <script src="assets/js/script.js"></script>
     <script>
+        {
+            const arrNum = [100, 200, 300, 400, 500];
+            document.querySelector('.sample01_N1').innerHTML = 1;
+            document.querySelector('.sample01_Q1').innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector('.sample01_M1').innerHTML = ".lenght";
+            document.querySelector('.sample01_R1').innerHTML = arrNum.length;
+        
+            const arrText = ["a", "b", "c", "d", "e"];
+            document.querySelector('.sample01_N2').innerHTML = 2;
+            document.querySelector('.sample01_Q2').innerHTML = '["a", "b", "c", "d", "e"]';
+            document.querySelector('.sample01_M2').innerHTML = ".lenght";
+            document.querySelector('.sample01_R2').innerHTML = arrText.length;
 
+            const arr = [1, 2, ['a', 'b']];
+            document.querySelector('.sample01_N3').innerHTML = 3;
+            document.querySelector('.sample01_Q3').innerHTML = "[1, 2, ['a', 'b']]";
+            document.querySelector('.sample01_M3').innerHTML = ".lenght";
+            document.querySelector('.sample01_R3').innerHTML = arr.length;
+        }
+
+        {
+            const arrNum = [100, 200, 300, 400, 500];
+            const text1 = arrNum.join("*");
+            const text2 = arrNum.join("-");
+            const text3 = arrNum.join("");
+            const text4 = arrNum.join(" ");
+
+            document.querySelector('.sample01_N1').innerHTML = 1;
+            document.querySelector('.sample01_Q1').innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector('.sample01_M1').innerHTML = ".join";
+            document.querySelector('.sample01_R1').innerHTML = test1;
+        
+            document.querySelector('.sample01_N2').innerHTML = 2;
+            document.querySelector('.sample01_Q2').innerHTML = '["a", "b", "c", "d", "e"]';
+            document.querySelector('.sample01_M2').innerHTML = ".join";
+            document.querySelector('.sample01_R2').innerHTML = text2;
+
+            document.querySelector('.sample01_N3').innerHTML = 3;
+            document.querySelector('.sample01_Q3').innerHTML = "[1, 2, ['a', 'b']]";
+            document.querySelector('.sample01_M3').innerHTML = ".join";
+            document.querySelector('.sample01_R3').innerHTML = text3;
+        }
     </script>
     </main>
 </body>
