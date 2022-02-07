@@ -166,7 +166,7 @@
                     <li data-name="animation-name"><strong>animation-name</strong> : animation-name 속성은 애니메이션 키프레임 이름을 설정합니다.</li>
                     <li data-name="animation-play-state"><strong>animation-play-state</strong> : animation-play-state 속성은 애니메이션의 진행상태를 설정합니다.</li>
                     <li data-name="backdrop-filter"><strong>backdrop-filter</strong> : backdrop-filter 속성은 요소 뒤에 필터효과를 설정합니다.</li>
-                    <li data-name="backface-visibilit"><strong>backface-visibility</strong> : backface-visibility 속성은 요소 뒷면 출력 여부 설정합니다.</li>
+                    <li data-name="backface-visibilit"><strong>backface-visibility</strong> : backface-visibility 속성은 요소 뒷면 디스플레이 여부 설정합니다.</li>
                     <li data-name="caption-side"><strong>caption-side</strong> : caption-side 속성은 테이블 caption의 위치를 설정합니다.</li>
                 </ul>
             </div>
@@ -180,13 +180,13 @@
 
         searchBox.addEventListener("keyup", () => {
             const searchWord = searchBox.value; //사용자가 입력한 데이터 저장소
-            //console.log(searchWord);
 
             cssList.forEach(el => {
                 console.log(el.dataset.name)
 
                 const cssName = el.dataset.name; //CSS 속성 값
-                
+                console.log(searchWord)
+                console.log(cssName.indexOf(searchWord))
                 if(cssName.indexOf(searchWord)){
                     el.classList.add("hide");
                 } else {
