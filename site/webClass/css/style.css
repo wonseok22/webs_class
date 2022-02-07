@@ -368,8 +368,6 @@
 /* 이미지 유형 01(img_type01) */
 .img_type01 {
     padding: 150px 0;
-    height: 500px;
-    margin-bottom: 500px;
     
 }
 .img_type01 h3{
@@ -475,7 +473,7 @@
 }
 .img_type02 h3 em {
     font-size: 20px;
-    color: #777;
+    margin-left: 10px;
     vertical-align: -4px;
 }
 .img_type02 .img-wrap {
@@ -521,9 +519,13 @@
     display: block;
     font-size: 30px;
     font-weight: 500;
+    color: #fff;
+    transition: 0.3s;
 }
 .img_type02 .img-wrap li span a {
+    transition: 0.3s;
     display: block;
+    opacity: 0;
     background: #000;
     border-radius: 40px;
     font-weight: 300;
@@ -531,7 +533,15 @@
     padding: 7px 10px 5px 10px;
     color: #fff;
 }
+.img_type02 .img-wrap li:hover span {
 
+}
+.img_type02 .img-wrap li:hover span em{
+    color: #000;
+}
+.img_type02 .img-wrap li:hover span a{
+    opacity: 1;
+}
 .img_type02 .img-wrap li:nth-child(1){
     background-image: url(../img/img_type02-1.png);
 }
