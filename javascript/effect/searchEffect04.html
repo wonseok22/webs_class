@@ -167,28 +167,33 @@
         }
 
         /*  option */
-
-        .board .list li {
-            display: none;
+        .board .desc {
+            background: #a5c3d5;
+            font-size: 18px;
+            margin: 5px 0;
+            border-radius: 4px;
+            padding: 15px 10px;
         }
 
-        .board .list li.show {
-            display: block;
+        .board .list {
+            background: #a5c3d5;
+            padding: 15px 10px;
+            border-radius: 4px;
         }
 
-        .board .search span {
-            border: 1px solid #223547;
-            border-radius: 30px;
-            padding: 5px 25px;
+        .board .list span {
+            border: 1px solid #000;
+            border-radius: 20px;
+            padding: 5px 20px;
+            margin: 3px;
             display: inline-block;
-            transition: all 0.2s;
+            transition: all 0.3s;
+            cursor: pointer;
         }
 
-        .board .search span:hover {
+        .board .list span:hover {
             background: #223547;
             color: #fff;
-            cursor: pointer;
-
         }
     </style>
 </head>
@@ -212,9 +217,9 @@
                 <input type="text" id="search-box" placeholder="CSS 속성을 입력해주세요!!">
             </div>
             <!-- 전체 목록 개수 -->
-            <div class="count"></div>
+            <div class="count">전체 목록 개수 : 0개</div>
             <!-- CSS 설명 영역 -->
-            <div class="desc"></div>
+            <div class="desc">아래의 속성을 검색하면 설명이 나옵니다.</div>
             <!-- css 속성 리스트 -->
             <div class="list"></div>
         </div>
@@ -222,18 +227,77 @@
 
     <!-- script -->
     <script>
-       const cssProperty = [
-           {name : "all", desc : "all 속성은 CSS 속성을 재설정하는데 사용할 수 있는 약식 속성입니다."},
-           {name : "animation", desc : "animation 속성은 애니메이션 속성을 설정하기 위한 약식 속성입니다."},
-           {name : "animation-delay", desc : "animation-delay 속성은 애니메이션이 시작되는 시간을 설정합니다."},
-           {name : "animation-direction", desc : "animation-direction 속성은 애니메이션이 움직이는 방향을 설정합니다."},
-           {name : "animation-duration", desc : "animation-duration 속성은 애니메이션이 움직이는 시간을 설정합니다."},
-           {name : "animation-fill-mod", desc : "animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정합니다."},
-           {name : "animation-iteration-count", desc : "animation-iteration-count 속성은 애니메이션 반복 횟수를 설정합니다."},
-           {name : "animation-name", desc : "animation-name 속성은 애니메이션 키프레임 이름을 설정합니다."},
-           {name : "animation-play-state", desc : "animation-play-state 속성은 애니메이션의 진행상태를 설정합니다."},
-           {name : "backdrop-filter", desc : "backdrop-filter 속성은 요소 뒤에 필터효과를 설정합니다."}
-       ]
+        const cssProperty = [{
+                name: "all",
+                desc: "all 속성은 CSS 속성을 재설정하는데 사용할 수 있는 약식 속성입니다."
+            },
+            {
+                name: "animation",
+                desc: "animation 속성은 애니메이션 속성을 설정하기 위한 약식 속성입니다."
+            },
+            {
+                name: "animation-delay",
+                desc: "animation-delay 속성은 애니메이션이 시작되는 시간을 설정합니다."
+            },
+            {
+                name: "animation-direction",
+                desc: "animation-direction 속성은 애니메이션이 움직이는 방향을 설정합니다."
+            },
+            {
+                name: "animation-duration",
+                desc: "animation-duration 속성은 애니메이션이 움직이는 시간을 설정합니다."
+            },
+            {
+                name: "animation-fill-mod",
+                desc: "animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정합니다."
+            },
+            {
+                name: "animation-iteration-count",
+                desc: "animation-iteration-count 속성은 애니메이션 반복 횟수를 설정합니다."
+            },
+            {
+                name: "animation-name",
+                desc: "animation-name 속성은 애니메이션 키프레임 이름을 설정합니다."
+            },
+            {
+                name: "animation-play-state",
+                desc: "animation-play-state 속성은 애니메이션의 진행상태를 설정합니다."
+            },
+            {
+                name: "backdrop-filter",
+                desc: "backdrop-filter 속성은 요소 뒤에 필터효과를 설정합니다."
+            }
+        ]
+        const searchBox = document.querySelector('#search-box');
+        const cssCount = document.querySelector('.count');
+        const cssDesc = document.querySelector('.desc');
+        const cssList = document.querySelector('.list');
+
+        cssProperty.map((ele, idx) => {
+            cssCount.innerText = "전체 목록 갯수 : " + (idx + 1) + "개";
+            cssList.innerHTML += "<span>" + ele.name + "</span>";
+        })
+
+        searchBox.addEventListener("keyup", () => {
+            const searchWord = searchBox.value;
+            findProp(searchWord);
+        })
+
+        function findProp(searchProp) {
+            const targetData = cssProperty.find((data) => data.name === searchProp)
+
+            //찾는 데이터가 없을 때
+            if(targetData == null){
+                cssDesc.textContent = "해당 속성은 존재하지 않습니다. 다시 검색해주세요!";
+                return
+            }
+            cssDesc.innerHTML = targetData.desc;
+            
+        }
+        document.querySelectorAll('.list span').forEach( () => addEventListener('click', (el) => {
+            const listProp = el.target.innerText;
+            findProp(listProp);
+        }));
     </script>
 </body>
 
