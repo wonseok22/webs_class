@@ -632,40 +632,54 @@
 
 /* footer */
 
-#footer {
-    background-color: #e6e6e6;
-    width: 100%;
-    height: 600px;
+.footer_type01 {
+    padding: 150px 0;
+    background: #F5F5F5;
+    font-family: 'GmarketSans';
 }
-
-#footer .container h3 {
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 30px;
-}
-
-#footer .footer-wrap {
+.footer-menu {
     display: flex;
-}
-
-#footer .footer-wrap {
-    padding-top: 150px;
-    border-bottom: 1px solid #000;
-    padding-bottom: 72px;
     justify-content: space-between;
+    padding-bottom: 50px;
+    border-bottom: 1px solid rgb(205, 205, 205);
+    margin-bottom: 50px;
 }
-
-#footer .container ul {
-    line-height: 1.6;
+.footer-menu > div {
+    width: 16%;
 }
-
-#footer .container li {
+.footer-menu > div h3 {
+    font-weight: 500;
+    margin-bottom: 35px;
+    font-size: 20px;
+}
+.footer-menu > div li a {
+    font-weight: 300;
     font-size: 14px;
+    line-height: 1.8;
+    position: relative;
+    color: rgb(96, 96, 96);
+    transition: all 0.3s;
 }
-
+.footer-menu > div li a:hover {
+    color: rgb(0, 0, 0);
+}
+.footer-menu > div li a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 1px;
+    background: #000;
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+}
+.footer-menu > div li a:hover::before {
+    transform: scaleX(1);
+    color: #000;
+}
 .footer-rights {
     text-align: center;
-    margin-top: 50px;
 }
 
 .footer-sns {
