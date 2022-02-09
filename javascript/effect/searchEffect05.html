@@ -241,7 +241,11 @@
             <!-- CSS 설명 영역 -->
             <div class="desc">아래의 속성을 검색하면 설명이 나옵니다.</div>
             <!-- css 속성 리스트 -->
-            <div class="list"></div>
+            <div class="list">
+                <ul>
+
+                </ul>
+            </div>
         </div>
     </div>
 
@@ -298,11 +302,25 @@
                 desc: "backdrop-filter 속성은 요소 뒤에 필터효과를 설정합니다."
             }
         ]
-        cssProperty.forEach(el => {
-            console.log(el.view)
-            console.log(el.name)
+
+        const searchBox = document.querySelectorAll('.search span');
+        const cssList = document.querySelector('.list ul');
+        const cssCount = document.querySelector('.count em');
+
+        searchBox.forEach(el => {
+            el.addEventListener("click", ()=>{
+                onClick()    
+            })
         })
-        console.log(cssProperty.map(el => el.view))
+        function onClick(){
+
+        }
+
+        function upDataList(){
+            cssProperty.forEach(el => cssList.innerHTML += `<li>${el.name}</li>`)
+        }
+        upDataList();
+
     </script>
 </body>
 
