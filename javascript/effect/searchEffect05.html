@@ -317,7 +317,7 @@
         }
 
         function upDataList(){
-            cssProperty.forEach(el => cssList.innerHTML += `<li>${el.name}</li>`)
+            cssProperty.forEach(el => cssList.innerHTML += `<li>${el.name} : ${el.desc} <span>${el.view}</span></li>`)
         }
         upDataList();
 
