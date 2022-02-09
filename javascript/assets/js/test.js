@@ -37,7 +37,7 @@ console.log(t2([0, 1, 2, 4, 5, 6, 7, 8, 9]));
         let score = 0;
         for (let value of games) {
             if (value[0] > value[2]) score += 3;
-            else if (value[0] < value[2]) score++;
+            else if (value[0] == value[2]) score++;
         }
         return score;
     }
@@ -207,19 +207,6 @@ const t8 = (nums) => {
 console.log(t8("2 4 7 8 10"));
 console.log(t8("1 2 1 1"));
     
-
-let zz = 0;
-while (true){
-    zz ++;
-    if (zz==3){
-        continue
-    }
-    if (zz > 6){
-        break;
-    }
-    console.log(zz)
-}
-
 
 
 
