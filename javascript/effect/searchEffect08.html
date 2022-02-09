@@ -205,11 +205,11 @@
                 <li><a href="searchEffect01.html">1</a></li>
                 <li><a href="searchEffect02.html">2</a></li>
                 <li><a href="searchEffect03.html">3</a></li>
-                <li class="active"><a href="searchEffect04.html">4</a></li>
+                <li><a href="searchEffect04.html">4</a></li>
                 <li><a href="searchEffect05.html">5</a></li>
                 <li><a href="searchEffect06.html">6</a></li>
                 <li><a href="searchEffect07.html">7</a></li>
-                <li><a href="searchEffect08.html">8</a></li>
+                <li class="active"><a href="searchEffect08.html">8</a></li>
             </ul>
         </div>
         <div class="board">
@@ -272,36 +272,7 @@
                 desc: "backdrop-filter 속성은 요소 뒤에 필터효과를 설정합니다."
             }
         ]
-        const searchBox = document.querySelector('#search-box');
-        const cssCount = document.querySelector('.count');
-        const cssDesc = document.querySelector('.desc');
-        const cssList = document.querySelector('.list');
 
-        cssProperty.map((ele, idx) => {
-            cssCount.innerText = "전체 목록 갯수 : " + (idx + 1) + "개";
-            cssList.innerHTML += "<span>" + ele.name + "</span>";
-        })
-
-        searchBox.addEventListener("keyup", () => {
-            const searchWord = searchBox.value;
-            findProp(searchWord);
-        })
-
-        function findProp(searchProp) {
-            const targetData = cssProperty.find((data) => data.name === searchProp)
-
-            //찾는 데이터가 없을 때
-            if(targetData == null){
-                cssDesc.textContent = "해당 속성은 존재하지 않습니다. 다시 검색해주세요!";
-                return
-            }
-            cssDesc.innerHTML = targetData.desc;
-            
-        }
-        document.querySelectorAll('.list span').forEach( () => addEventListener('click', (el) => {
-            const listProp = el.target.innerText;
-            findProp(listProp);
-        }));
     </script>
 </body>
 
