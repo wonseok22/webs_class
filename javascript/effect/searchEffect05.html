@@ -181,15 +181,6 @@
             border-radius: 4px;
         }
 
-        .board .list span {
-            border: 1px solid #000;
-            border-radius: 20px;
-            padding: 5px 20px;
-            margin: 3px;
-            display: inline-block;
-            transition: all 0.3s;
-            cursor: pointer;
-        }
 
         .board .list span:hover {
             background: #223547;
@@ -208,6 +199,19 @@
             background: #223547;
             color: #fff;
             cursor: pointer;
+        }
+        .board .list li {
+            padding-right: 100px;
+            position:relative
+        }
+        .board .list li span {
+            position: absolute;
+            right: 5px;top: 50%;
+            font-size: 14px;
+            transform: translateY(-50%);
+        }
+        .board .list li span::before {
+            content: 'view : ';
         }
     </style>
 </head>
@@ -231,10 +235,10 @@
             <h1><a href="searchEffect.html">CSS 속성 검색하기</a></h1>
 
             <div class="search">
-                <span>조회수 10개 이상</span>
-                <span>조회수 20개 이상</span>
-                <span>조회수 30개 이상</span>
-                <span>조회수 40개 이상</span>
+                <span data-view="10">조회수 10개 이상</span>
+                <span data-view="20">조회수 20개 이상</span>
+                <span data-view="30">조회수 30개 이상</span>
+                <span data-view="40">조회수 40개 이상</span>
             </div>
             <!-- 전체 목록 개수 -->
             <div class="count">전체 목록 개수 : 0개</div>
@@ -309,11 +313,12 @@
 
         searchBox.forEach(el => {
             el.addEventListener("click", ()=>{
-                onClick()    
+                onClick(el)    
             })
         })
-        function onClick(){
-
+        function onClick(el){
+            // 클릭한 대상의 뷰 값을 갖고와야함
+            console.log(el.dataset.view)           
         }
 
         function upDataList(){
