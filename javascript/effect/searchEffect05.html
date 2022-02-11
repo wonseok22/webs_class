@@ -307,24 +307,32 @@
             }
         ]
 
-        const searchBox = document.querySelectorAll('.search span');
-        const cssList = document.querySelector('.list ul');
-        const cssCount = document.querySelector('.count em');
+        const searchBox = document.querySelectorAll(".search span");    
+        const cssList = document.querySelector(".list ul");       
+        const cssCount = document.querySelector(".count em");    
+        
+        let listHTML = "";
 
-        searchBox.forEach(el => {
-            el.addEventListener("click", ()=>{
-                onClick(el)    
-            })
+        //목록 보여주기
+        function updataList(list){
+            listHTML = "";
+
+            for(const data of list){
+                listHTML += `<li>${data.name} : ${data.desc} <span>${data.view}</span></li>`;
+            }
+            cssList.innerHTML = listHTML;
+        }
+        updataList(cssProperty);
+
+        //버튼 클릭하기
+        searchBox.forEach(span => {
+            span.addEventListener("click", () => {
+                const target = span.dataset.view;
+                const filterList = cssProperty.filter(data => data.view >= target)
+
+                updataList(filterList);
+            });
         })
-        function onClick(el){
-            // 클릭한 대상의 뷰 값을 갖고와야함
-            console.log(el.dataset.view)           
-        }
-
-        function upDataList(){
-            cssProperty.forEach(el => cssList.innerHTML += `<li>${el.name} : ${el.desc} <span>${el.view}</span></li>`)
-        }
-        upDataList();
 
     </script>
 </body>

@@ -272,7 +272,24 @@
                 desc: "backdrop-filter 속성은 요소 뒤에 필터효과를 설정합니다."
             }
         ]
+        const searchBox = document.querySelectorAll('.search span');
+        const cssList = document.querySelector('.list ul');
+        const cssCount = document.querySelector('.count em');
 
+        const updateList = function(){
+            let listHTML = "";
+
+            for(i=0; i<cssProperty.length; i++){
+                listHTML +=  `<li>${cssProperty[i].name}</li>`
+            }
+            cssProperty.forEach(data => {
+                listHTML += `<li>${data.name}</li>`
+            })
+            for(let data of cssProperty){
+                listHTML += `<li>${data.name}</li>`
+            }
+            cssList.innerHTML = listHTML;
+        }
     </script>
 </body>
 

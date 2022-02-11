@@ -1,4 +1,4 @@
-cssProperty = [{
+const cssProperty = [{
         name: "align-content",
         desc: "align-content 속성은 콘텐츠의 상하관계 정렬 상태를 정의합니다."
     },
