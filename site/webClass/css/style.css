@@ -158,6 +158,11 @@
     padding: 8px 22px;
 }
 
+#header .member a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
 
 
 /* 배너 */
