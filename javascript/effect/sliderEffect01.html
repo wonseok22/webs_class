@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>슬라이드 이펙트</title>
+    <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/color-brewer.min.css">
+      <link rel="stylesheet" href="/path/to/styles/default.min.css">
     <style>
         @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
         * {
@@ -231,7 +234,16 @@
                                 <li><a href="#">Jquery</a></li>
                             </ul>
                         </div>
-                        <div class="view-cont"></div>
+                        <div class="view-cont">
+                            <div>
+<pre><code class="language-javascript">
+    const modal = function (){
+        document.querySelector("#modal").classList.toggle('show')
+    }
+</code></pre>
+                            </div>
+                            
+                        </div>
                     </div>
                 </div>
                 <button class="modal-close" onclick=modal() style="color:#000;" >닫기</button>
@@ -240,10 +252,27 @@
     </div>
     <!-- //info -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script src="/path/to/highlight.min.js"></script>
     <script>
         const modal = function (){
             document.querySelector("#modal").classList.toggle('show')
         }
+        hljs.highlightAll();
+
+        const tabMenu = function(){
+            const tabBtn = document.querySelectorAll(".view-title > ul > li");
+            const tabCont = document.querySelectorAll(".view-cont");
+            let selected = 0;
+            tabBtn.forEach((el,idx)=>el.addEventListener('click',(ele)=>{
+                tabBtn[selected].classList.remove("active")
+                selected = idx
+                el.classList.add("active")
+            }
+            ));
+
+        }
+        tabMenu();
     </script>
 </body>
 </html>
