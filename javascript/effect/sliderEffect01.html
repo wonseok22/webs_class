@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>슬라이드 이펙트</title>
-    <link rel="stylesheet"
-      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/color-brewer.min.css">
-      <link rel="stylesheet" href="/path/to/styles/default.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/androidstudio.min.css">
+    <link rel="stylesheet" href="/path/to/styles/default.min.css">
     <style>
         @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: "NexonLv1Gothic";
         }
+
         a {
             text-decoration: none;
             color: #fff;
             transition: all 0.2s;
         }
+
         li {
             list-style: none;
         }
+
         body {
             width: 100%;
             height: 100vh;
@@ -33,8 +37,9 @@
             overflow: hidden;
             color: #fff;
         }
+
         body::before {
-            content : "";
+            content: "";
             position: absolute;
             left: 0;
             top: 0;
@@ -43,17 +48,21 @@
             background: rgba(0, 0, 0, 0.5);
             z-index: -1;
         }
+
         .title {
             position: absolute;
             left: 20px;
             top: 20px;
         }
         .title h1 {
-            font-size: 46px;
-            border-bottom: 1px solid #fff;
-            margin-bottom: 8px;
-            padding-bottom: 8px;
-            
+            font-size: 30px;
+            border-bottom: 1px dashed #fff;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            font-weight: 500;
+        }
+        .title p {
+            font-size: 16px;
         }
         .number {
             position: absolute;
@@ -68,16 +77,12 @@
             width: 30px;
             height: 30px;
             border: 1px dashed #fff;
-            border-radius: 10px;
+            border-radius: 20px;
             text-align: center;
-            line-height: 20px;
+            line-height: 30px;
             font-size: 12px;
-            padding: 30px;
         }
-        .number li a:hover {
-            background: #fff;
-            color: #000;
-        }
+        .number li a:hover,
         .number li.active a {
             background: #fff;
             color: #000;
@@ -88,20 +93,19 @@
             bottom: 20px;
         }
         .source button {
-            border: 1px dashed #fff;
+            border: 1px solid #fff;
             background: transparent;
-            font-family: "NexonLv1Gothic";
+            font-family: 'NexonLv1Gothic';
             color: #fff;
-            padding: 10px 30px;
             font-size: 16px;
+            padding: 10px 30px;
             border-radius: 50px;
             transition: all 0.2s;
-            cursor : pointer;
-            margin-top: 5px;
+            cursor: pointer;
         }
         .source button:hover {
             background: #fff;
-            color: #000;
+            color: #000
         }
         /* modal */
         #modal {
@@ -113,64 +117,58 @@
             background: rgba(0,0,0,0.4);
             z-index: 1000;
             transform: scale(0);
-            transition: all 0.3s ease;
         }
         #modal.show {
             animation: foldOut 1s ease forwards;
-            
         }
         @keyframes foldOut {
-            0% {
-                transform: scaleX(0) scaleY(0.005);
-            }
-            50% {
-                transform: scaleX(1) scaleY(0.005);
-            }
-            100% {
-                transform: scaleX(1) scaleY(1);
-            }
+            0%   {transform: scaleX(0) scaleY(0.005)}
+            50%  {transform: scaleX(1) scaleY(0.005)}
+            100% {transform: scaleX(1) scaleY(1)}
         }
         .modal-wrap {
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100vh;
             flex-direction: column;
+            height: 100vh;
+        }
+        .modal-close {
+            margin-top: 10px;
         }
         .modal-cont {
             opacity: 1;
         }
         .code-view {
             width: 60vw;
-            height: 70vh;
+            min-height: 30vh;
             background: #fff;
-            border: 1px solid #000;
-            border-radius: 10px;
+            border: 1px solid #F2F2F2;
+            border-radius: 5px;
             overflow: hidden;
         }
-        .code-view .view-header{
-            padding: 5px 0 5px 10px;
-            border-bottom: 1px solid #e2e8f0;
+        .view-header {
+            padding: 7px 0 7px 10px;
+            border-bottom: 1px solid #eee;
         }
-        .code-view .view-header > span{
+        .view-header > span {
             width: 10px;
             height: 10px;
             display: inline-block;
             border-radius: 10px;
-            
         }
-        .view-header > span:nth-child(1){
-            background-color: #f56565;
+        .view-header > span:nth-child(1) {
+            background-color: #F56565;
         }
-        .view-header > span:nth-child(2){
-            background-color: #f6e05e;
+        .view-header > span:nth-child(2) {
+            background-color: #F6E05E;
         }
-        .view-header > span:nth-child(3){
-            background-color: #4ebb6b;
+        .view-header > span:nth-child(3) {
+            background-color: #4EBB7B;
         }
         .view-title {
             border-bottom: 1px solid #eee;
-            padding: 9px 10px 7px 10px;
+            padding: 9px 0 7px;
             height: 37px;
         }
         .view-title li {
@@ -180,20 +178,29 @@
             color: rgb(150, 150, 150);
             font-size: 14px;
             text-transform: uppercase;
-            padding: 12px 15px 8px 15px;
-            margin: 2px 5px 0 5px;
+            padding: 12px 20px 8px 20px;
+            margin: 2px 0 0 0;
         }
         .view-title li.active a {
             color: #000;
-            border-bottom: 2px solid #F56565;
+            background: #DCDCE4;
         }
-        .code-view .view-cont{
-            background-color: #e8e8e8;
+        .view-cont {
+            background-color: #E8E8E8;
             height: 100%;
-            padding: 20px;
         }
-</style>
+        .view-cont > div {
+            display: none;
+        }
+        .view-cont > div:first-child {
+            display: block;
+        }
+        .view-cont pre code.hljs {
+            line-height: 1.6;
+        }
+    </style>
 </head>
+
 <body>
 
     <!-- info -->
@@ -236,17 +243,16 @@
                         </div>
                         <div class="view-cont">
                             <div>
-<pre><code class="language-javascript">
-    const modal = function (){
-        document.querySelector("#modal").classList.toggle('show')
-    }
+<pre><code class="language-javascript">const modal = function (){
+    document.querySelector("#modal").classList.toggle('show')
+}
 </code></pre>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
-                <button class="modal-close" onclick=modal() style="color:#000;" >닫기</button>
+                <button class="modal-close" onclick=modal() >닫기</button>
             </div>
         </div>
     </div>
@@ -255,24 +261,29 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
     <script src="/path/to/highlight.min.js"></script>
     <script>
-        const modal = function (){
+        const modal = function () {
             document.querySelector("#modal").classList.toggle('show')
         }
         hljs.highlightAll();
 
-        const tabMenu = function(){
+        const tabMenu = function () {
             const tabBtn = document.querySelectorAll(".view-title > ul > li");
             const tabCont = document.querySelectorAll(".view-cont");
             let selected = 0;
-            tabBtn.forEach((el,idx)=>el.addEventListener('click',(ele)=>{
-                tabBtn[selected].classList.remove("active")
-                selected = idx
-                el.classList.add("active")
-            }
-            ));
+            tabBtn.forEach((el, idx) => el.addEventListener('click', (ele) => {
+                    tabBtn[selected].classList.remove("active")
+                    selected = idx
+                    el.classList.add("active")
+                    tabCont.forEach(el => {
+                        el.style.display = "none";
+                    })
+                    tabCont[idx].style.display="block";
+                })
+            );
 
         }
         tabMenu();
     </script>
 </body>
+
 </html>
