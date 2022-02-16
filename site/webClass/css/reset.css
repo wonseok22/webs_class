@@ -29,7 +29,9 @@ figure, figcaption {
 #skip a:focus {
     left: 5px;
 }
-
+fieldset,button {
+    border: 0;
+}
 /* clearfix */
 .clearfix {
     zoom: 1;
