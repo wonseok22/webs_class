@@ -184,17 +184,17 @@
         let sliderWidth = sliderImg.offsetWidth;
 
         function gotoSlider(num) {
-            currIndex++;
-            console.log(currIndex)
             sliderInner.style.transition = "all 0.3s";
             sliderInner.style.transform = "translateX(-"+(sliderWidth*num)+"px)";
             
         }
         sliderBtnPrev.addEventListener("click", () => {
-            gotoSlider(4)
+            currIndex = (currIndex+slider.length-1) % slider.length
+            gotoSlider(currIndex)
         })
         sliderBtnNext.addEventListener("click", () => {
-            gotoSlider(0)
+            currIndex = (currIndex+1) % slider.length
+            gotoSlider(currIndex)
         })
     </script> 
 </body>
