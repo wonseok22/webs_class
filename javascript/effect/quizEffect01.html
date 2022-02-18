@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,12 +13,14 @@
             font-weight: normal;
             font-style: normal;
         }
+
         @font-face {
             font-family: 'Cafe24Dangdanghae';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.2/Cafe24Dangdanghae.woff') format('woff');
             font-weight: normal;
             font-style: normal;
         }
+
         * {
             margin: 0;
             padding: 0;
@@ -25,16 +28,113 @@
             font-size: 16px;
             line-height: 1.6;
             word-break: break-all;
-            color: #223547;
+            font-family: 'DungGeunMo';
         }
 
         a {
             text-decoration: none;
-            color: #000;
+        }
+
+        li {
+            list-style: none;
+        }
+        body {
+            height: 100vh;
+            background-color: #f6f6f6;
+            background-image:
+                linear-gradient(90deg, #cdcccc 0px, #cdcccc 1px, transparent 1px, transparent 99px, transparent 100px),
+                linear-gradient(#cdcccc 0px, #cdcccc 1px, transparent 1px, transparent 99px, transparent 100px),
+                linear-gradient(#e0e0e0 0px, #e0e0e0 1px, transparent 1px, transparent 99px, transparent 100px),
+                linear-gradient(90deg, #e0e0e0 0px, #e0e0e0 1px, transparent 1px, transparent 99px, transparent 100px),
+                linear-gradient(transparent 0px, transparent 5px, #f6f6f6 5px, #f6f6f6 95px, transparent 95px, transparent 100px),
+                linear-gradient(90deg, #e0e0e0 0px, #e0e0e0 1px, transparent 1px, transparent 99px, #e0e0e0 99px, #e0e0e0 100px),
+                linear-gradient(90deg, transparent 0px, transparent 5px, #f6f6f6 5px, #f6f6f6 95px, transparent 95px, transparent 100px),
+                linear-gradient(transparent 0px, transparent 1px, #f6f6f6 1px, #f6f6f6 99px, transparent 99px, transparent 100px),
+                linear-gradient(#cdcccc, #cdcccc);
+            background-size: 100px 100%, 100% 100px, 100% 10px, 10px 100%, 100% 100px, 100px 100%, 100px 100%, 100px 100px, 100px 100px;
+        }
+        #header {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background: #262626;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            height: 70px;
+            z-index: 10;
+        }
+        #header::before {
+            content: '';
+            border: 4px ridge #a3a3a3;
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            width: calc(100% - 16px);
+            height: calc(100% - 18px);
+            z-index: -1;
+        }
+        #header h1 {
+            
+        }
+        #header nav {
+        }
+        #header nav li {
+            display: inline;
+        }
+        #header nav li a {
+            color: #fff;
+            display: inline-block;
+            padding: 10px;
+            transition : all 0.2s;
+        }
+        #header nav li a:hover {
+            opacity: 0.5;
+        }
+        .quiz__wrap {
+            max-width: 500px;
+            background: #fff;
+            m
         }
     </style>
 </head>
+
 <body>
-    
+    <header id="header">
+        <h1>Quiz</h1>
+        <nav>
+            <ul>
+                <li><a href="#">주관식 한 문제</a></li>
+                <li><a href="#">주관식 여러 문제</a></li>
+                <li><a href="#">객관식 한 문제</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="quiz__wrap">
+            <h2>HTML 퀴즈</h2>
+            <div class="quiz">
+                <h3 class="quiz__question">
+                    <span class="question__number"></span>
+                    <span class="question__title">웹 페이지와 그 내용을 구조화하기 위해 사용하는 코드는 무엇인가요?</span>
+                </h3>
+                <div class="quiz__answer"></div>
+            </div>
+        </div>
+        <!-- //quiz__wrap -->
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+
+    </footer>
+    <!-- //footer -->
 </body>
+
 </html>
