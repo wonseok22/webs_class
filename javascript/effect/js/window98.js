@@ -12,11 +12,14 @@ const modal = function () {
     document.querySelector(".modal-close").addEventListener("click", () => {
         document.querySelector("#modal").classList.add("hide")
     })
+    document.querySelector(".close").addEventListener("click", () => {
+        document.querySelector("#modal").classList.add("hide")
+    })
 }
 modal()
        
     const tabMenu = function () {
-        const viewBtn = document.querySelectorAll(".view-title > ul > li")
+        const viewBtn = document.querySelectorAll(".menu-bar > span")
         const viewCont = document.querySelectorAll(".view-cont > div")
     
         viewBtn.forEach((btn, index) => {
@@ -39,3 +42,4 @@ modal()
             })
         })
     }
+    tabMenu()
