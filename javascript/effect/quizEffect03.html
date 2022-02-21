@@ -714,25 +714,45 @@
     </footer>
 
     <script>
-        const quizType = document.querySelector(".quiz__type");         //퀴즈 종류
-        const quizNumber = document.querySelector(".quiz__number");     //퀴즈 번호
-        const quizAsk = document.querySelector(".quiz__ask");           //퀴즈 질문
-        const quizConfirm = document.querySelector(".quiz__confirm");   //정답 확인 버튼
+        const quizType = document.querySelectorAll(".quiz__type");         //퀴즈 종류
+        const quizNumber = document.querySelectorAll(".quiz__number");     //퀴즈 번호
+        const quizAsk = document.querySelectorAll(".quiz__ask");           //퀴즈 질문
+        const quizConfirm = document.querySelectorAll(".quiz__confirm");   //정답 확인 버튼
         const quizResult = document.querySelector(".quiz__result");     //정답 결과
         const quizView = document.querySelector(".quiz__view");         //강아지
         const quizInput = document.querySelector(".quiz__input");       //input 
 
         //문제 정보
-        const answerType = "javascript";
-        const answerNum = 1;                                           
-        const answerAsk = "객체 기반의 스크립트 프로그래밍 언어는 무엇입니까?";    
-        const answerResult = "javascript";
+        const quizInfo = [
+            {
+                answerType : "javascript",
+                answerNum : 1,
+                answerAsk : " 객체 기반의 스클비트 프로그래밍 언어는 무엇입니까?",
+                answerResult : "javascript"
+            },
+            {
+                answerType : "html",
+                answerNum : 2,
+                answerAsk : "웹 페이지를 표현하기 위한 마크업 언어는 무엇입니까?",
+                answerResult : "html"
+            },
+            {
+                answerType : "css",
+                answerNum : 3,
+                answerAsk : "웹 페이지를 꾸미기 위해서 사용하는 언어는 무엇인가요?",
+                answerResult : "css"
+            }
+        ]
 
         //문제 출력
-        quizType.textContent = answerType;
-        quizNumber.textContent = answerNum + ". ";
-        quizAsk.textContent = answerAsk;
-        quizResult.textContent = answerResult;
+        for (let i in quizInfo){
+            quizType[i].textContent = quizInfo[i].answerType;
+            quizNumber[i].textContent = quizInfo[i].answerNum+ ". ";
+            quizAsk[i].textContent = quizInfo[i].answerAsk;
+            quizResult[i].textContent = quizInfo[i].answerResult;
+        }
+
+
 
         //정답 확인
         quizConfirm.addEventListener("click", () => {
