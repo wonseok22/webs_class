@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 이펙트</title>
+    <link rel="stylesheet" href="css/nexon.css">
+    <link rel="stylesheet" href="css/dracula.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <style>
+        body::before {
+            background: rgba(5, 36, 70, 0.87);
+            f
+        }
+    </style>
+</head>
+<body class="img08">
+    <!-- main -->
+    <main>
+        <section id="mouseType01">
+            <div class="cursor"></div>
+            <div class="mouse__wrap">
+                <p></p>
+                <p></p>
+            </div>
+        </section>
+    </main>
+    <!-- //main -->
+    <!-- info -->
+    <div class="info">
+        <div class="title">
+            <h1><a href="mouseEffect.html">JavaScript Mouse Effect01</a></h1>
+            <p>마우스 이펙트 - 따라다니기</p>
+        </div>
+        <div class="number">
+            <ul>
+                <li class="active"><a href="mouseEffect01.html">1</a></li>
+                <li><a href="mouseEffect02.html">2</a></li>
+                <li><a href="mouseEffect03.html">3</a></li>
+                <li><a href="mouseEffect04.html">4</a></li>
+                <li><a href="mouseEffect05.html">5</a></li>
+                <li><a href="mouseEffect06.html">6</a></li>
+                <li><a href="mouseEffect07.html">7</a></li>
+                <li><a href="mouseEffect08.html">8</a></li>
+            </ul>
+        </div>
+        <div class="source">
+            <button class="source-btn">소스보기</button>
+            <div id="modal">
+                <div class="modal-wrap">
+                    <div class="modal-cont">
+                        <div class="code-view">
+                            <div class="view-header" aria-hidden="true">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="view-title">
+                                <ul>
+                                    <li class="active"><a href="#">HTML</a></li>
+                                    <li><a href="#">CSS</a></li>
+                                    <li><a href="#">JavaScript</a></li>
+                                </ul>
+                            </div>
+                            <div class="view-cont">
+                                <div>
+<pre><code class="language-html">
+</code></pre>
+                                </div>
+                                <!-- //cont1 -->
+                                <div>
+<pre><code class="language-javascript">
+</code></pre>
+                                </div>
+                                <!-- //cont2 -->
+                                <div>
+<pre><code class="language-javascript">
+</code></pre>
+                                </div>
+                                <!-- //cont3 -->
+                            </div>
+                        </div>
+                    </div>
+                    <button class="modal-close">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //info -->
+    <!-- script -->
+    <script src="js/highlight.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+        highlight();
+        modal();
+        tabMenu();
+    </script>
+</body>
+</html>
