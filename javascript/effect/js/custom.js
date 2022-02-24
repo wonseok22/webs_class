@@ -1,41 +1,56 @@
 //highlight
-hljs.highlightAll();
+const highlight = function(){
+    hljs.highlightAll();
+}
 
 //modal
-const modal = function () {
-    //버튼을 클릭하면 modal창을 보이게 해주세요.
+const modal = function(){
     document.querySelector(".source-btn").addEventListener("click", () => {
-        document.querySelector("#modal").classList.add("show")
-        //닫기버튼 눌렀을 때 hide를 지워 지속적으로 버튼 사용가능하게
-        document.querySelector("#modal").classList.remove("hide")
-    })
+        document.querySelector("#modal").classList.add("show");
+        document.querySelector("#modal").classList.remove("hide");
+    });
     document.querySelector(".modal-close").addEventListener("click", () => {
-        document.querySelector("#modal").classList.add("hide")
+        document.querySelector("#modal").classList.add("hide");
     })
 }
-modal()
-       
-    const tabMenu = function () {
-        const viewBtn = document.querySelectorAll(".view-title > ul > li")
-        const viewCont = document.querySelectorAll(".view-cont > div")
-    
-        viewBtn.forEach((btn, index) => {
-            btn.addEventListener("click", () => {
-                // 모든 클래스 클릭하지 않은건 active 삭제
-                for (let i of viewBtn) {
-                    i.classList.remove("active")
-                }
-                //내가 클릭한건 active 추가
-                btn.classList.add("active")
-    
-                //모든 컨텐츠 박스 안보이게
-                viewCont.forEach(el => {
-                    el.style.display = "none";
-                })
-                viewCont[index].style.display = "block"
-    
-                //내가 클릭한 콘텐츠 박스를 보이게
-    
-            })
-        })
-    }
+
+//tabmenu
+const tabMenu = function () {
+    const tabBtn = document.querySelectorAll(".view-title ul li");
+    const tabCont = document.querySelectorAll(".view-cont > div");
+
+    tabBtn.forEach((btn, btni) => {
+        btn.addEventListener("click", () => {
+            //내가 클릭한건 active추가
+            tabBtn.forEach(btn => {
+                btn.classList.remove("active");
+            }); //모든 클래스 active 삭제
+            btn.classList.add("active"); //클릭한 tabBtn에만 클래스 active 푸가
+
+            //모든 컨텐츠 박스 안보이게
+            tabCont.forEach(cont => {
+                cont.style.display = "none";
+            });
+
+            //내가 클릭한 콘텐츠 박스를 보이게
+            // tabCont.forEach((cont, conti) => {
+            //     if(conti == btni){
+            //         cont.style.display = "block";
+            //     }
+            // });
+            tabCont[btni].style.display = "block";
+        });
+    });
+}
+// <<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+//     <script>
+//         const modal = function(){
+//             $(".source-btn").click(()=>{
+//                 $("#modal").addClass("show");
+//             });
+//             $(".modal-close").click(()=>{
+//                 $("#modal").removeClass("show");
+//             })
+//         }
+//         modal();
+//     </script>

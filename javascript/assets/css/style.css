@@ -71,7 +71,15 @@ img {
     right: 20px; 
     bottom: 20px;
 }
-
+button {
+    border: 1px solid #cdcdcd;
+    padding: 3px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+button:active {
+    background: #eee;
+}
 .top a {
     width: 60px; 
     height: 60px;
