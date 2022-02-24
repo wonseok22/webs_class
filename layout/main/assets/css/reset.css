@@ -22,3 +22,9 @@ em {
 ul {
     list-style: none;
 }
+h2 {
+    font-size: 24px;
+}
+article{
+    line-height: 1;
+}
