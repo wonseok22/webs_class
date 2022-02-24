@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃08</title>
+
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            background-color: #E3F2FD;
+        }
+
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "nav nav"
+                "aside section1"
+                "aside section2"
+                "aside section3"
+                "footer footer"
+                ;
+            grid-template-columns: 25% 75%;
+            grid-template-rows: 100px 100px 260px 260px 260px 100px;
+        }
+
+        #header {
+            background-color: #BDE3F9;
+            grid-area: header;
+
+        }
+
+        #nav {
+            background-color: #94D2F6;
+            grid-area: nav;
+        }
+
+        #aside {
+            background-color: #70C0F2;
+            grid-area: aside;
+        }
+
+        #section1 {
+            background-color: #5AB3F0;
+            grid-area: section1;
+        }
+
+        #section2 {
+            background-color: #4BA6EE;
+            grid-area: section2;
+        }
+
+        #section3 {
+            background-color: #4599DF;
+            grid-area: section3;
+        }
+
+        #footer {
+            background-color: #3B86CB;
+            grid-area: footer;
+        }
+        @media (max-width: 1300px) {
+            #wrap {
+                width: 96%;
+                grid-template-areas:
+                "header header header"
+                "nav nav nav"
+                "aside section1 section1"
+                "aside section2 section3"
+                "footer footer footer";
+            grid-template-columns: 25% calc(75% /2) calc(75% /2);
+            grid-template-rows: 100px 100px 260px 520px 100px;
+            }
+        }
+        @media (max-width: 768px) {
+            #wrap {
+                width: 100%;
+                grid-template-areas:
+                "header header"
+                "nav nav"
+                "aside section1"
+                "aside section2"
+                "footer footer";
+            grid-template-columns: 25% 75%;
+            grid-template-rows: 100px 100px 390px 390px 100px;
+            }
+        }
+        @media (max-width: 480px) {
+            #wrap {
+                width: 100%;
+                grid-template-areas:
+                "header"
+                "nav"
+                "aside"
+                "section1"
+                "section2"
+                "footer";
+            grid-template-columns: 100%;
+            grid-template-rows: 100px 100px 200px 430px 150px 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <aside id="aside"></aside>
+        <section id="section1"></section>
+        <section id="section2"></section>
+        <section id="section3"></section>
+        </section>
+
+        <footer id="footer"></footer>
+    </div>
+</body>
+
+</html>

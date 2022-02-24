@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃08</title>
+
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            background-color: #E3F2FD;
+        }
+
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        #header {
+            width: 100%;
+            height: 100px;
+            background-color: #BDE3F9;
+        }
+
+        #nav {
+            width: 100%;
+            height: 100px;
+            background-color: #94D2F6;
+        }
+
+        #main {
+            display: flex;
+            width: 100%;
+        }
+
+        #aside {
+            width: 25%;
+            height: 780px;
+            background-color: #70C0F2;
+        }
+
+        #contents {
+            width: 75%;
+            display: flex;
+            flex-wrap: wrap
+        }
+
+        #section1 {
+            width: 100%;
+            height: 260px;
+            background-color: #5AB3F0;
+        }
+
+        #section2 {
+            width: 100%;
+            height: 260px;
+            background-color: #4BA6EE;
+        }
+
+        #section3 {
+            width: 100%;
+            height: 260px;
+            background-color: #4599DF;
+        }
+
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #3B86CB;
+        }
+
+        @media (max-width: 1300px) {
+            #wrap {
+                width: 96%;
+            }
+
+            #section2 {
+                width: 50%;
+                height: 520px;
+            }
+
+            #section3 {
+                width: 50%;
+                height: 520px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            #wrap {
+                width: 100%;
+            }
+
+            #section1 {
+                height: 390px;
+            }
+
+            #section2 {
+                width: 100%;
+                height: 390px;
+            }
+
+            #section3 {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #main {
+                flex-wrap: wrap;
+            }
+
+            #aside {
+                width: 100%;
+                height: 200px;
+            }
+
+            #contents {
+                width: 100%;
+            }
+
+            #section1 {
+                height: 430px;
+            }
+
+            #section2 {
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <main id="main">
+            <aside id="aside"></aside>
+            <div id="contents">
+                <section id="section1"></section>
+                <section id="section2"></section>
+                <section id="section3"></section>
+            </div>
+        </main>
+        </section>
+
+        <footer id="footer"></footer>
+    </div>
+</body>
+
+</html>
