@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <style>
+        @font-face {
+            font-family: 'SCoreDream';
+            font-weight: 100;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamThin.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamThin.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamThin.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamThin.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamThin.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'SCoreDream';
+            font-weight: 200;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamExtraLight.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamExtraLight.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamExtraLight.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamExtraLight.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamExtraLight.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'SCoreDream';
+            font-weight: 300;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamLight.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamLight.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamLight.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamLight.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamLight.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'SCoreDream';
+            font-weight: 400;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamRegular.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamRegular.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamRegular.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamRegular.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamRegular.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'SCoreDream';
+            font-weight: 500;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamMedium.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamMedium.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamMedium.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamMedium.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamMedium.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'SCoreDream';
+            font-weight: 600;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamBold.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamBold.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamBold.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamBold.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamBold.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'SCoreDream';
+            font-weight: 700;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamExtraBold.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamExtraBold.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamExtraBold.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamExtraBold.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamExtraBold.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'SCoreDream';
+            font-weight: 800;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamHeavy.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamHeavy.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamHeavy.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamHeavy.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamHeavy.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'SCoreDream';
+            font-weight: 900;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamBlack.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamBlack.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamBlack.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamBlack.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamBlack.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "SCoreDream";
+        }
+
+        body {
+            width: 100%;
+            height: 10000px;
+        }
+
+        #wrap {
+            margin: 0 auto;
+            width: 1920px;
+            height: 10000px;
+            background-color: #eee;
+        }
+
+        #header {
+            height: 100px;
+            width: 100%;
+            background-color: #ddd;
+        }
+
+        #banner {
+            height: 1080px;
+            background: url(./assets/img/bannerIMG.png);
+        }
+
+        .cont1 {
+            width: 100%;
+            background-color: #EDD9C0;
+            height: 800px;
+            padding: 100px 0;
+        }
+
+        .cont1 .container {
+            width: 1240px;
+            height: 800px;
+            margin: 0px auto;
+            display: flex;
+        }
+
+        .cont1 .container .text_box {
+            width: 620px;
+            margin-right: 20px;
+            height: 800px;
+        }
+
+        .cont1 .container .text_box .text1 {
+            font-size: 30px;
+            color: #5EBC88;
+        }
+
+        .cont1 .container .text_box .text2 {
+            font-size: 100px;
+            color: #5EBC88;
+            font-weight: bold;
+            line-height: 1.2;
+            margin-bottom: 70px;
+            left: -10px;
+            position: relative;
+        }
+
+        .cont1 .container .text_box .text3 {
+            font-size: 34px;
+            margin-bottom: 80px;
+            line-height: 1.4;
+        }
+
+        .cont1 .container .text_box .text4 {
+            height: 84px;
+            border-top: 2px solid #000;
+            border-bottom: 2px solid #000;
+        }
+
+        .cont1 .container .text_box .text5 {
+            font-size: 40px;
+            font-weight: bold;
+            margin-top: 40px;
+        }
+
+        .cont1 .container .img_box {
+            width: 600px;
+            height: 800px;
+            display: block;
+        }
+
+        .cont1 .container .img_box .circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+            background-color: #5EBC88;
+            position: absolute;
+            top: -50px;
+            z-index: 10000;
+        }
+
+        .cont1 .container .img_box .circle::before {
+            content: "7조";
+            font-size: 100px;
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .cont1 .container .img_box .img1 {
+            position: relative;
+            margin-top: 87px;
+            width: 600px;
+            height: 600px;
+            background: url(./assets/img/cont1IMG.png);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="banner"></nav>
+        <main id="contents">
+            <div class="cont1">
+                <div class="container">
+                    <div class="text_box">
+                        <div class="text1">UI/UX Web Design Project</div>
+                        <div class="text2">반려동물을<br>부탁해</div>
+                        <div class="text3">반려동물이 아프거나 이상증세를 보일 때,<br>
+                            당황하지 말고 접속하세요.<br>
+                            사용자 주변에 있는 동물병원과 약국의<br>
+                            정확한 위치를 제공합니다.</div>
+                        <div class="text4"></div>
+                        <div class="text5">박종호 이현우 한원석</div>
+                    </div>
+                    <div class="img_box">
+                        <div class="img1">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cont2">
+                <div class="container"></div>
+            </div>
+            <div class="cont3">
+                <div class="container"></div>
+            </div>
+            <div class="cont4">
+                <div class="container"></div>
+            </div>
+            <div class="cont5">
+                <div class="container"></div>
+            </div>
+            <div class="cont6">
+                <div class="container"></div>
+            </div>
+            <div class="cont7">
+                <div class="container"></div>
+            </div>
+            <div class="cont8">
+                <div class="container"></div>
+            </div>
+
+        </main>
+        <footer id="footer"></footer>
+    </div>
+</body>
+
+</html>
