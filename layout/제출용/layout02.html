@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 02</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #E8F5E9;
+;
+        }
+        #wrap {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        #header {
+            width: 100%;
+            height: 100px;
+            background-color: #7ec484;
+        }
+
+
+        #contents {
+            display: flex;
+            width: 100%;
+        }
+        
+        #contents .left{
+            width: 20%;
+            height: 780px;
+            background-color: #62b86a;
+        }
+        
+        #contents .center{
+            width: 60%;
+            height: 780px;
+            background-color: #47ac50;
+        }
+        
+        #contents .right{
+            width: 20%;
+            height: 780px;
+            background-color: #3e9d47;
+        }
+
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #338b3c;
+        }
+        @media (max-width: 1300px) {
+            #contents {
+                flex-wrap: wrap;
+            }
+            #contents .left{
+                width: 40%;
+                height: 500px;
+                background-color: #62b86a;
+            }
+            
+            #contents .center{
+                width: 60%;
+                height: 500px;
+                background-color: #47ac50;
+            }
+            #contents .right{
+                width: 100%;
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            #contents .left{
+                width: 0;
+            }
+            #contents .center{
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #footer {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main id="wrap">
+        <header id="header"></header>
+        <section id="contents">
+            <aside class="left"></aside>
+            <aside class="center"></aside>
+            <aside class="right"></aside>
+        </section>
+        <footer id="footer"></footer>
+    </main>
+</body>
+</html>
