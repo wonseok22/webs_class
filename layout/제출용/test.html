@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        #header {
+            align-items: center;
+            vertical-align: middle;
+            height: 150px;
+            border-bottom: 1px solid #000 ;
+            display: flex;
+            padding: 5px 10px ;
+            min-width: 1200px ;
+            white-space: nowrap ;
+            background-color: #fff9a4 ;
+        }
+
+        #header .logo {
+            display: inline-block;
+            margin: 0 auto;
+            padding: 15px 18px ;
+        }
+
+        #header .logo img {
+            margin-right: 3px;
+            margin-bottom: 10px;
+        }
+        #header .menu ul{
+            display: flex;
+        }
+        #header .logo a {
+            font-size: 30px ;
+        }
+
+        #header .logo a em {
+            font-size: 18px ;
+            font-weight: 500 ;
+
+        }
+
+
+        #header .member {
+            float: right;
+            text-align: right;
+            padding: 16px 18px 6px 18px;
+        }
+
+        #header .member a {
+            display: inline-block;
+            font-weight: bold;
+            border: 1px solid #000;
+            border-radius: 50px;
+            padding: 6px 22px;
+            color: #fff;
+            background-color: rgb(0, 0, 0);
+        }
+
+        #header .member a:hover {
+            background-color: #fff9c4;
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <div class="menu">
+            <ul>
+                <li><a href="/findMaps">내 근처 병원찾기</a></li>
+                <li><a href="/board">내 정보 공유하기</a></li>
+            </ul>
+        </div>
+        <div class="logo">
+            <h1>
+                <a href="/"><img src="./petCaseLogo.png" width="30" height="30"></a>
+            </h1>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#">미구현</a></li>
+                <li><a href="#">미구현</a></li>
+            </ul>
+        </div>
+        <div class="member"><a href="/signUp">회원가입</a><a class="log"></a></div>
+    </header>
+</body>
+
+</html>
