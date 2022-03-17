@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        ul {
+            list-style: none;
+            color: #000;
+        }
+        a{
+            color: #000;
+            text-decoration: none;
+        }
+        #header {
+            align-items: center;
+            height: 100px;
+            border-bottom: 1px solid #000 ;
+            display: flex;
+            padding: 5px 10px ;
+            min-width: 1200px ;
+            white-space: nowrap ;
+            background-color: #FFF77F ;
+        }
+        #header .menu{
+            width: 100%;
+            transform: translateY(5px);
+            font-size: 20px;
+            font-weight: bold;
+            align-items: space-between;
+            display: flex;
+        }
+        #header .menu a{
+            margin: 0 auto;
+            transition: 0.4s;
+            transform: translateY(-10px);
+            display: inline-block;
+            font-weight: bold;
+            padding: 20px 10px;
+        }
+        #header .logo {
+            padding-top: 3px;
+        }
+        #header .menu a:hover {
+            vertical-align: middle;
+            background: #F7E781 ;
+            color: #000;
+            padding: 14px 10px;
+            border-radius: 10px;
+        }
+        #header a img{
+            padding-top: 5px;
+        }
+        #header .member {
+            float: right;
+            padding: 16px 18px 6px 18px;
+        }
+        #header .member a {
+            transform: translateY(-10px);
+            display: inline-block;
+            font-weight: bold;
+            border: 1px solid #000;
+            border-radius: 50px;
+            padding: 6px 22px;
+            color: #fff;
+            background-color: rgb(0, 0, 0);
+        }
+        #header .member a:hover {
+            background-color: #FFF9C4;
+            color: rgb(0, 0, 0);
+        }
+        .ir_so {overflow: hidden; position: absolute; width: 0; height: 0; line-height: 0; text-indent: -9999px;}
+        .container {width: 492px; height: 650px; margin: 0 auto; margin-top: 50px; border: 1px solid #000; border-radius: 20px; display: flex; justify-content: center}
+        .title__box {border-bottom: 1px solid #000; width: 337px; height: 72px;}
+        .title__box h2 {font-size: 30px; margin-top: 30px; text-align: center;}
+        .join-box {margin-top: 30px;}
+        input {width: 317px; height: 50px; margin-top: 20px; padding-left: 20px;}
+        .checkbox {width: 20px;height: 20px;}
+        label {font-size: 12px; vertical-align: 0.5em;}
+        .join__box, .idpass__box {font-size: 10px; margin-top: 15px; margin-bottom: 20px; display: inline-block;}
+        button {display: block; width: 335px; height: 43px; margin-top: 15px; border: 1px solid #000; font-size: 16px;}
+        .join-main {background: #FFF9C4;}
+        .join-kakao {background: #FFFF00;}
+        .join-naver {background: #03C75A;}
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="menu">
+            <a href="#">증상별 질병찾기</a>
+            <a href="#">내 근처 동물병원 찾기</a>
+        </div>
+            <div class="logo"><a href="#"><img src="./petCaseLogo.png" width="80" height="80"></a></div>
+        <div class="menu">
+            <a href="#">내 정보 공유하기</a>
+            <a href="#">공지사항</a>
+        </div>
+        <div class="member">
+            <a href="#">회원가입</a>
+            <a href="#">로그인</a>
+        </div>
+    </header>
+    <div class="container">
+        <section>
+            <div class="title__box"><h2>로그인</h2></div>
+            <form action="loginSave.php" name="login" method="post">
+                    <fieldset>
+                        <legend class="ir_so">로그인 입력폼</legend>
+                        <div class="join-box">
+                            <div>
+                                <label for="youEmail" class="ir_so">이메일</label>   
+                                <input type="email" id="youEmail" name="youEmail" placeholder="아이디" autocomplete="off" autofocus required>
+                            </div>
+                            <div>
+                                <label for="youPass" class="ir_so">비밀번호</label>   
+                                <input type="password" id="youPass" name="youPass" maxlength="20" placeholder="비밀번호" autocomplete="off" required>
+                            </div>
+                            <div>
+                                <input class="checkbox" type="checkbox" id="youPass" name="youPass" maxlength="20" autocomplete="off" required>
+                                <label for="youPass">아이디 저장</label>   
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+                <a class="join__box" href="#">회원가입</a>
+                <a class="idpass__box" href="#">아이디찾기/비밀번호찾기</a>
+                <button id="joinBtn" class="join-main" type="submit">로그인</button>
+                <button id="joinBtn" class="join-kakao" type="submit">카카오계정 로그인</button>
+                <button id="joinBtn" class="join-naver" type="submit">네이버계정 로그인</button>
+        </section>
+    </div>
+</body>
+</html>
