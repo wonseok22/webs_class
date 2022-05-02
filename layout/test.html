@@ -1,108 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout Test1</title>
+    <title>Game</title>
+    <link rel="stylesheet" href="test.css">
+    <link href="https://webfontworld.github.io/fontlab/LABDigital.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: 'LABDigital';
         }
+
         body {
-            background-color: #e5f4fd;
-        }
-        #wrap {
-            width: 1200px;
-            margin: 0 auto;
-        }
-        
-        #header {
-            width: 1200px;
-            height: 100px;
-            background-color: #bde3f9;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
         }
 
-        #nav {
-            width: 1200px;
-            display: flex;
+        header {
+            background: rgb(120, 67, 182);
         }
 
-        #nav .left{
-            width: 600px;
-            height: 100px;
-            background-color: #94d2f6;
-        }
-        #nav .right{
-            width: 600px;
-            height: 100px;
-            background-color: #90b9ce;
+        header h1 {
+            font-size: 20px;
+            padding: 5px;
+            color: #fff;
+            text-transform: uppercase;
         }
 
-        #contents {
-            width: 1200px;
-            height: 780px;
+        .hoverBtn1 {}
+
+        .btn {
+            position: absolute;
+            text-align: center;
         }
 
-        #contents .article1{
-            width: 1200px;
-            display: flex;
+        .btn a {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(140deg, #ED99FB 30%, #C1BBFC 50%, rgba(255, 255, 255, .6) 70%);
+            transition: all 0.3s;
         }
 
-        #contents .article1 .article1-1{
-            width: 300px;
-            height: 520px;
-            background-color: #70c0f2;
+        .btn a img {
+            width: 30px;
+            padding-top: 10px;
         }
 
-        #contents .article1 .article1-2{
-            width: 900px;
+        .btn a span {
+            position: absolute;
+            left: 50%;
+            bottom: -20px;
+            transform: translateX(-50%);
+            background: rgb(49, 248, 204);
+            padding: 0 10px;
+            white-space: nowrap;
         }
 
-        #contents .article1 .article1-2-1{
-            width: 900px;
-            height: 260px;
-            background-color: #5ab3f0;
+        .btn:hover a {
+            background: rgb(49, 248, 204);
         }
 
-        #contents .article1 .article1-2-2{
-            width: 900px;
-            height: 260px;
-            background-color: #4ba6ee;
+        .btn1 {
+            left: 100px;
+            top: 100px;
         }
 
-        #contents .article2{
-            width: 1200px;
-            height: 260px;
-            background-color: #4599df;
+        .btn2 {
+            left: 200px;
+            top: 100px;
         }
 
-        #footer {
-            width: 1200px;
-            height: 100px;
-            background-color: #3b86cb;
+        .btn3 {
+            left: 330px;
+            top: 100px;
+        }
+
+        .musicBox {
+            position: absolute;
+            right: -500px;
+            top: 10px;
+            width: 400px;
+            height: 700px;
+            transition: all 0.4s;
+        }
+
+        .musicBox.show {
+            right: 10px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
+
 <body>
-    <div id="wrap">
-        <header id="header"></header>
-        <nav id="nav">
-            <aside class="left"></aside>
-            <aside class="right"></aside>
-        </nav>
-        <section id="contents">
-            <article class="article1">
-                <article class="article1-1"></article>
-                <article class="article1-2">
-                    <article class="article1-2-1"></article>
-                    <article class="article1-2-2"></article>
-                </article>
-            </article>
-            <article class="article2"></article>
-        </section>
-        <footer id="footer"></footer>
+    <header id="header">
+        <h1>Game Site<em id="clock"></em></h1>
+    </header>
+    <main>
+        <div class="btn btn1">
+            <a href="#">
+                <img src="img/guitar-light.svg" alt="">
+                <span>Music</span>
+            </a>
+        </div>
+        <div class="btn btn2">
+            <a href="#">
+                <img src="img/camera-light.svg" alt="">
+                <span>Momory Game</span>
+            </a>
+        </div>
+        <div class="btn btn3">
+            <a href="#">
+                <img src="img/station-light.svg" alt="">
+                <span>Typing Game</span>
+            </a>
+        </div>
+    </main>
+    <div class="musicBox">
+        <iframe class="musicBoxIframe" src="../javascript/musicPlayer/index.html" frameborder="0"></iframe>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $(".btn1").draggable();
+        $(".btn2").draggable();
+        $(".btn3").draggable();
+        $(".btn1").click(function () {
+            $(".musicBox").toggleClass("show")
+        });
+
+        function printTime() {
+
+            var clock = document.getElementById("clock"); // 출력할 장소 선택
+
+            var now = new Date(); // 현재시간
+
+            var nowTime = (now.getMonth() + 1) + "월" + now.getDate() + "일 " + now.getHours() +
+                ":" + now.getMinutes() + ":" + now.getSeconds();
+
+            clock.innerHTML = nowTime; // 현재시간을 출력
+
+            setTimeout("printTime()", 1000); // setTimeout(“실행할함수”,시간) 시간은1초의 경우 1000
+
+        }
+
+        window.onload = function () { // 페이지가 로딩되면 실행
+
+            printTime();
+
+        }
+
+
+    </script>
 </body>
+
 </html>
